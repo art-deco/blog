@@ -6,10 +6,14 @@ __initSidebar()
 import { Component, render, h } from '@externs/preact'
 import { makeIo, init, start } from './__competent-lib'
 import Ellipsis from '../components/ellipsis.jsx'
+import GithubBadge from '../components/github-badge.jsx'
+import Highlightjs from 'splendid/build/components/highlightjs'
 import SocialButtons from 'splendid/build/components/social-buttons'
 
 const __components = {
   'ellipsis': Ellipsis,
+  'github-badge': GithubBadge,
+  'highlightjs': Highlightjs,
   'social-buttons': SocialButtons,
 }
 
@@ -17,8 +21,15 @@ const io = makeIo()
 
 /** @type {!Array<!preact.PreactProps>} */
 const meta = [{
+  key: 'highlightjs',
+  id: 'ccdbf,ccdbf1',
+  props: {
+    lang: 'javascript',
+  },
+},
+{
   key: 'social-buttons',
-  id: 'cc6e3',
+  id: 'c93ef',
   props: {
     url: 'https://art-deco.github.io/blog/',
     meta: true,
@@ -32,6 +43,14 @@ const meta = [{
     timeout: 300,
   },
   children: ["\n  Please bear one moment while I add the content\n"],
+},
+{
+  key: 'github-badge',
+  id: 'cc3eb',
+  props: {
+    owner: 'art-deco',
+    name: 'blog',
+  },
 }]
 meta.forEach(({ key, id, props = {}, children = [] }) => {
   const Comp = __components[key]

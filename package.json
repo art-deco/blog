@@ -30,8 +30,8 @@
   },
   "homepage": "https://art-deco.github.io/blog/",
   "devDependencies": {
-    "documentary": "^1.35.9",
-    "splendid": "^1.16.11",
-    "zoroaster": "^4.1.2"
+    "documentary": "^1.37.0",
+    "splendid": "^1.17.1",
+    "zoroaster": "^4.3.0"
   }
 }
