@@ -11,7 +11,7 @@
   background-color: #fff;}h1,h2,h3{margin-top: 0;
   margin-bottom: 0.5rem;}p{margin-top: 0;
   margin-bottom: 1rem;}ul{margin-top: 0;
-  margin-bottom: 1rem;}a{color: #007bff;
+  margin-bottom: 1rem;}strong{font-weight: bolder;}a{color: #007bff;
   text-decoration: none;
   background-color: transparent;}a:hover{color: #0056b3;
   text-decoration: underline;}pre,code{font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

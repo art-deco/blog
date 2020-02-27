@@ -129,6 +129,75 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 <noscript><img alt="section break" src="/blog/section-breaks/0.svg"></noscript></a>
             </p>
             
+            <h2 id="26-feb-2020">26 Feb 2020</h2>
+            
+            <p>Today was a chilled day, started with a Twitter now I know why people hang out there, it's quite fun when people crack jokes, had a go myself... If you're not joking you bring nothing to this world.</p>
+            
+            <p>
+              <img class="b-t" alt="The higher we soar the smaller we appear to those who cannot fly. Seems like Nietzsche is year 1 plan in Seagulls school." src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='587' height='401'/%3E" data-io>
+              <noscript>
+                <img class="b-t" alt="The higher we soar the smaller we appear to those who cannot fly. Seems like Nietzsche is year 1 plan in Seagulls school." src="/blog/pages/index/img/twitter.png">
+              </noscript>
+            </p>
+            
+            <p>A person gave me 50 claps on Medium for a post on compiling Koa. What legend. The rest? I show them how to compile Node.JS packages, and people don't want to publish it on a newsletter... People's arrogance is pulsating through the screen. Light years ahead of everyone they can't even click the significance of this. But those claps made my day. I know my audience and they've made the right choice :)</p>
+            
+            <p>
+              <img class="b-t" alt="Why would anyone be such a dick as not to give people 50 claps on #medium every time?" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='585' height='398'/%3E" data-io>
+              <noscript>
+                <img class="b-t" alt="Why would anyone be such a dick as not to give people 50 claps on #medium every time?" src="/blog/pages/index/img/clap.gif">
+              </noscript>
+            </p>
+            
+            <p>From Twitter moving on to work. It's painful to get back to doing programming on a project after a break as there's a bit of anxiety of how to start but I'm glad I was procrastinating on GitHub checking open issues, on <span class="tm">exif2css</span> so that got me back to the photo uploader. Started working on the <span class="tm">images.artdeco.app</span> which is a microservice that can receive images and resize them, without having to install sharp on each other app that needs such functionality. I thought I could update Docker image to Node 12, but it wasn't starting since JSX wasn't being parsed properly. I thought it was because of the <span class="tm">@depack/render</span> which didn't get updated but the transpilation happens in ÀLaMode and not rendering therefore I'm still not sure what happened. Upgraded <span class="tm">render</span> package though to provide <span class="tm2">api.xml</span> to expose the method via API, which was used later now.</p>
+            
+            <p>Then <em>Depack</em> also had to be updated, and static-analysis because of that Node 12 bug with <span class="tm">makePromise</span> that broke pretty much all code in so many packages, but I'm getting back on track. That's the downside of compilation as it's the same as fixing package version, so that you have to go back to each package and recompile it to statically link new code which wouldn't have been the case if it was a dependency with non-fixed version.</p>
+            
+            <p>Started using GitHub Actions which are really awesome: 7GB memory, Windows / Linux / Mac containers? Shut Up and don't take any of my money for 2000 free minutes per month. <img alt="ci badge from actions" data-io>
+             <noscript><img alt="ci badge from actions" src="/blog/pages/index/img/ci.png"></noscript></p>
+            
+            <p><em>Idio</em> also then required fixing as frontend middleware dependent on the <span class="tm">resolve-package</span> which was broken because of <span class="tm">makepromise</span>. So I upgraded dependencies, and built it also. The actions could be good for building with Closure Compiler since they're so powerful, but I feel like I need control of my build step so that I can manually run <span class="tm">yarn lib/compile</span> and <span class="tm">yarn test-compile</span> to be able to fix issues. Or do I and it's just a bad habit that wastes a lot of time and could be avoided by working on a separate branch, and running a build step on master after a merge? nah. Also integrated the newly refreshed render for SSR rendering into <em>Idio</em> itself and wrote some documentation for that. <em>Documentary</em> needed an update to be able to use multiple parts from an example, e.g.,</p>
+            
+            <pre id="ccdbf2"><code class="javascript hljs">import dep from 'dep'
+/* start example */
+import Code from 'code'
+/* end example */
+
+(async () =&gt; {
+  /* start example */
+  console.log(Code.sayHi())
+  /* start example */
+})()</code></pre>
+            
+            <p>Also that required an update to stdlib which fixed the forks issue on Windows, because of the root path which I talked about in the previous entry. Didn't document this feature as I've stopped documenting documentary properly because there's this annoying bug with Wikis when forks do something silly and the whole documentation is generated twice which is extremely annoying but I can't figure it out.</p>
+            
+            <p>For dinner had <a href="https://www.fabfood4all.co.uk/kale-soup/">kale carrot</a> soup with some chicken. Was ok. The soup was properly blended which is the first time I've do it like that.</p>
+            
+            <p>The rest of the day, spent working on the image uploader, in particular extracting only the needed bits from <span class="tm">azure-storage</span> package that are required to PUT blobs on storage. In the end, I had 2 files, an understanding of Azure's REST and its signing mechanism, and cut 390 lines from yarn.lock by removing their library which is 25% of the whole dependency dept. Super happy about it. The process consisted of debugging what their client is doing and taking bits of their code. I've kind of adapted it for my own style, as the <span class="tm">rqt</span> will add <span class="tm">Content-Type</span> header using capital letters but signing worked for <span class="tm">content-type</span> and same with <span class="tm">content-length</span> however it's not important on their servers, they just want the signature to be correct. The goal is to then write an article about the image uploader to start that content rolling on <em>Medium</em> which is quite fun, and could be used to talk about <em>Idio</em>.</p>
+            
+            <p>
+              <img class="b-t" alt="Removing 390 lines from yarn.lock by implementing custom rest api client for azure blob storage" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1048' height='642'/%3E" data-io>
+              <noscript>
+                <img class="b-t" alt="Removing 390 lines from yarn.lock by implementing custom rest api client for azure blob storage" src="/blog/pages/index/img/debt.png">
+              </noscript>
+            </p>
+            
+            <strong>TODO</strong>
+            
+            <ul>
+              <li>ÀLaNode stopped working because I built it on Windows and the shebang ends with <span class="tm">\r</span> which breaks interpreter... The <span class="tm">\r</span> appeared because of automatic crln in git config, which basically means I need to switch it off, or run a regex on pre-publish script on windows to remove <span class="tm">\r</span>.</li>
+              <li>Find out what's going on with Documentary's forks which prevent proper compilation of its wiki.</li>
+              <li>Upload images on GitHub from image uploader, and hookup repo to GitHub Actions which will generate previews!</li>
+              <li>Extract the image rotation js code from vue gallery that actually changes the dimensions of the container when a photo is rotated.</li>
+            </ul>
+            
+            <p class="SectionBreak">
+              <a title="Back To Top" href="#top">
+                <img alt="section break"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+            </p>
+            
             <h2 id="22-feb-2020">22 Feb 2020</h2>
             
             <p>Today was pretty intense. Started with wanted to fix failing Appveyor build for <em>Zoroaster</em>. This required looking into masks which were the reason builds were failing. From masks, I investigated forks as I initially thought that preprocessing doesn't get applied to inputs, but it wasn't the case. Instead, I added the <span class="tm">normaliseOutputs</span> option to forks so that outputs are consistent across platforms (replacing <span class="tm">\n</span> with <span class="tm">\r\n</span> on Win).</p>
@@ -151,14 +220,14 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
             
             <p>It's been known that <span class="tm">console.log</span> prints a <span class="tm">\n</span> and not <em>EOL</em> after the logged string. But another interesting observation is that template strings also always print <span class="tm">\n</span> regardless of the platform:</p>
             
-            <pre id="ccdbf1"><code class="javascript hljs">const t = `hello
+            <pre id="ccdbf"><code class="javascript hljs">const t = `hello
 world`</code></pre>
             
             <p>Counter-intuitive, even if the file is saved on a Windows machine, it the new line here is still <span class="tm">\n</span> and not <span class="tm">\r\n</span>. +1 to interview questions list ;)</p>
             
             <p>A lot of time today was spent on testing readline interface as well as forks can accept inputs, and the way I was testing it before, was just by writing questions to <span class="tm">process.stdout</span> and then pushing answers to <span class="tm">process.stdin</span>. That was totally fine on Mac, but on Windows, it's buggy. You need to create separate readable and writable streams for each new question, otherwise Node will freeze if trying to do this through the main process's streams. It can work one time but then stop working for all next times when asking questions. I've updated <span class="tm2">reloquent</span> so that a question now extends <em>ReadlineOptions</em> which means that for testing, I can be passing new streams, e.g.,</p>
             
-            <pre id="ccdbf"><code class="javascript hljs">import { askSingle } from 'reloquent'
+            <pre id="ccdbf1"><code class="javascript hljs">import { askSingle } from 'reloquent'
 const output = new Catchment()
 const q = askSingle({
   text: 'My girl, Where did you sleep last night',
@@ -191,7 +260,7 @@ output.promise // =&gt; My girl, Where did you sleep last night</code></pre>
               <a title="Back To Top" href="#top">
                 <img alt="section break"
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+                <noscript><img alt="section break" src="/blog/section-breaks/2.svg"></noscript></a>
             </p>
           </div>
         </div>

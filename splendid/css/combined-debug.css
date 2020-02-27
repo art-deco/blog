@@ -65,6 +65,9 @@ p, ul {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+strong {
+  font-weight: bolder;
+}
 a {
   color: #007bff;
   text-decoration: none;

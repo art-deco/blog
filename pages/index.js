@@ -10,6 +10,7 @@ export const index = {
   links: {
     gutenberg: 'https://www.gutenberg.org/files/84/84-h/84-h.htm',
   },
+  reverse: true,
 }
 
 // additional directories
