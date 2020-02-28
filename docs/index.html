@@ -23,9 +23,7 @@
       (function(b){var a=document.createElement("link");a.href=b;a.rel="stylesheet";a.crossOrigin="crossorigin";document.head.appendChild(a)})('https://fonts.googleapis.com/css?family=Source%20Code%20Pro')
     </script>
     <style id="cpt">
-      
-        h1 { font-family: 'Great Vibes' }
-    
+      h1 { font-family: 'Great Vibes' }
       @font-face {
         font-family: 'Great Vibes';
         font-style: normal;
@@ -49,7 +47,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
     <link rel="stylesheet" href="/blog/css/combined.css">
     <link rel="preload" as="style" href="/blog/highlight.js/styles/default.css">
     <style>
-      .no-js [data-io], .no-js [data-loading], .no-js .ImageHolder { display: none!important }
+      .no-js [data-io], .no-js .ImageHolder, .no-js [data-loading] { display: none!important }
     </style>
     <noscript>
       <link rel="stylesheet"
@@ -129,6 +127,138 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 <noscript><img alt="section break" src="/blog/section-breaks/0.svg"></noscript></a>
             </p>
             
+            <h2 id="27-feb-2020">27 Feb 2020</h2>
+            
+            <p>Exactly one month from my birthday, where I sat at a pub drawing a diagram for photo-uploader.</p>
+            
+            <p>Really intense day although I don't even know what most of the time went on. Good stuff waka time is here for me for days like that. I started the day off by beginning an article on medium, and writing an intro to the new post, <strong>Node.JS Image Upload Microservice</strong>, it's going to be big and good. Having Idio makes making microservices a bliss, and it's a good business model -- to help startups set up their infrastructure, now we have Akashic.page for email subscriptions and web-pushes, and image upload. There's plenty more to explore, and provide consulting around those. The most amazing thing is that they are made with bespoke Art Deco software. London's calling.</p>
+            
+            <p>After the article, I got back on to working on the app, but there wasn't much to improve there hence anxiety again, so I needed to upgrade the MNP template for Idio, so that I can talk about using in the article as it's the easiest way to get started with it. This means I had to take bits out of akashic.page and start putting them into the template: types, tests and frontend were updated. I then took out <span class="tm">jsonErrors</span> middleware and made it common in the Idio server itself, to be reused. Found a bug when status code 500 was treated as client error. The chance of finding the error was actually 1% as the condition was <span class="tm">&lt;= 500</span> so I could've put any other code above 500, and it would have passed :P</p>
+            
+            <div class="b-B b-xq">
+              <div class="b-kb">
+                <img class="ImageHolder b-vk b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 767.8px) 510px,(max-width: 991.8px) 240px,(max-width: 1199.8px) 330px,398px" alt="anton" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2448' height='3264'/%3E">
+                <noscript>
+                  <picture>
+                    <source
+                      srcset="pages/index/img/2-1140.webp 1140w,pages/index/img/2-768.webp 768w,pages/index/img/2-576.webp 576w,pages/index/img/2-319.webp 319w"
+                      sizes="(max-width: 575.8px) 100vw,(max-width: 767.8px) 510px,(max-width: 991.8px) 240px,(max-width: 1199.8px) 330px,398px" type="image/webp">
+                    <img class="b-vk b-t" onLoad="webploaded(this)" alt="anton" src="/blog/pages/index/img/2-1140.JPG" srcset="pages/index/img/2-1140.JPG 1140w,pages/index/img/2-768.JPG 768w,pages/index/img/2-576.JPG 576w,pages/index/img/2-319.JPG 319w" sizes="(max-width: 575.8px) 100vw,(max-width: 767.8px) 510px,(max-width: 991.8px) 240px,(max-width: 1199.8px) 330px,398px">
+                  </picture>
+                </noscript>
+              </div>
+              <div class="b-kb">
+                <p>Mentally I'm just feeling better because I stopped expecting anything from people it's clear they don't even know the meaning of class. I thought that people kind of posses culture turns out only a couple of people develop it. It sounds so fucking vain but how else can I speak about it if it's true. One thing is being stuck about it, another when I can literally feel a lot of passion about it, about nobility and culture. I don't know where it's from but it's the second time I get this euphoric feeling, and it comes after I'm less confused about the state of the world and understand the condition we're in. there's no problem i just kept forgetting and measured everything to my own standard. proper culture is everything, art, museums, music, books. not to say that family guy is not fun. but i don't know, just feeling better when knowing that i'm 5 years ahead of everyone with my work, and i don't have to prove it we'll see in a few years who's a weirdo then. i love down to earth people who could appreciate it and learn from me instead this fascist community who think they have "culture". days like this...</p>
+              </div>
+            </div>
+            
+            <p>After Idio, went back to photo uploader. I already wrote some code a few years ago to rotate images based on their exif with CSS, called <span class="tm">vie-orientation-image</span>, which basically creates a container for an image, on which a transform is applied via CSS (but because the bounding box doesn't get rotated, it overflows), which hides the bounding box. But I think this is now possible to do on a canvas, because the upload already draws preview using canvas, to unload memory (a 250px wide photo is much smaller than 2000px which would lag in the browser).</p>
+            
+            <p>
+              <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px" alt="previews in the uploader" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='629' height='272'/%3E">
+              <noscript>
+                <picture>
+                  <source
+                    srcset="pages/index/img/previews-576.webp 576w,pages/index/img/previews-319.webp 319w,pages/index/img/previews-629.webp 629w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px"
+                    type="image/webp">
+                  <img class="b-t" onLoad="webploaded(this)" alt="previews in the uploader" src="/blog/pages/index/img/previews-576.png" srcset="pages/index/img/previews-576.png 576w,pages/index/img/previews-319.png 319w,pages/index/img/previews-629.png 629w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px">
+                </picture>
+              </noscript>
+            </p>
+            
+            <p>The front-end app is using Bootstrap, so some classes are set as <span class="tm">btn btn-sm</span>, for example, and additionally I followed the naming convention for capital letters in class names from CSS rules, e.g., <span class="tm">ImageInfo</span>. Therefore, I wanted to implement my old idea to integrate property names to class conversion in the transpiler. The main package that does JSX transpilation is <span class="tm">@idio/jsx</span>, which is then used by:</p>
+            
+            <ul>
+              <li><em>FrontEnd</em>, for live serving of JSX files from the server: DEVELOPMENT.</li>
+              <li><em>Depack</em>, when transpiling JSX prior to a build: PRODUCTION.</li>
+              <li><em>ÀLaMode</em>, during server-side rendering, and when building components for publishing: DISTRIBUTION.</li>
+            </ul>
+            
+            <p><em>JSX</em> is massive, and is used in every area of web development. I linked frontend and updated class names in the photo-uploader:</p>
+            
+            <pre id="ccdbf3"><code class="javascript hljs">import { $Added, $Uploading, $Error, $HasInput, $Uploaded } from './styles/photo.css'
+
+render() {
+  return (&lt;Copy error={error} hasInput={hasInput} processing={processing} src={src} uploaded={uploaded}&gt;
+    &lt;div Image position-relative w-100 h-100&gt;
+      {!src &amp;&amp;
+        &lt;span PreviewLoadingSpan position-absolute text-center&gt;
+          {LOCALE.previewLoading}...
+        &lt;/span&gt;}
+      &lt;img src={src} mw-100 mh-100 /&gt;
+      &lt;span ImageInfo style="top:0;left:0;"&gt;
+        {name}
+        {date &amp;&amp; &lt;br/&gt;}
+        {date}
+      &lt;/span&gt;
+      &lt;span ImageInfo CloseSpan onClick={onRemove} overflow-hidden text-center&gt;✕&lt;/span&gt;
+      {!result &amp;&amp; !error &amp;&amp; progress === null &amp;&amp;
+        &lt;BottomLeft style="background:transparent;" pl-0&gt;
+          &lt;a btn btn-light btn-sm onClick={this.uploadHandle}&gt;
+            {LOCALE.upload}
+          &lt;/a&gt;
+        &lt;/BottomLeft&gt;
+      }
+    &lt;/div&gt;
+  &lt;/Copy&gt;
+}</code></pre>
+            
+            <p>Notice <span class="tm2">Image</span>, <span class="tm2">btn</span>, <span class="tm2">btn-light</span>, <em>etc</em>. When I could use bootstrap classes I did, and otherwise the rules come from stylesheets.</p>
+            
+            <pre id="c1d47"><code class="css hljs">.Image img {
+  border-radius: 3px;
+  transition: .5s;
+}
+.Image:hover img {
+  box-shadow: 0 0 19px 1px white;
+}</code></pre>
+            
+            <p>There's also an import of class names, as they will be renamed by Closure Stylesheets for production build. Front-end will simply export the names as they are (by parsing the stylesheet and extracting all classes based on <span class="tm">\.[\w\d-_]+</span> regex). Only lines that don't start with whitespace will be used to check for class names, so that values like <span class="tm">.5rem</span> don't end up as class names. It's a hack since indentation is not required in CSS, but it is now hehe. Who doesn't indent rules. That could fail for media queries though, so need more robust strategy. Basically parsing CSS is not regex-space since it can have multiple opening <span class="tm">{</span>, as in media queries</p>
+            
+            <pre id="c1d471"><code class="css hljs">@media (min-width: 500px) {
+  body {
+    color: green;
+  }
+}</code></pre>
+            
+            <p>So that we can't just look for what's between {} as it will match from first { to the next one, and not to the balancing one. But I've already solved that in JSX parser (it's a wonder it works). Fixed a few issues in JSX parser as well, making comments and blank properties possible. In other words, JSX received 3 new options: <span class="tm">prop2class</span> for conversion of CapitalLetter properties into class name, <span class="tm">classNames</span> to enable putting props into class name also, such as bootstrap prop, and <span class="tm">renameMap</span> so that those names could be remapped after Closure Stylesheets did its renaming job.</p>
+            
+            <p><span class="tm">closure-stylesheets</span> is now a package that contains API to run Closure Stylesheets. It was extracted from Splendid, but making a new package, documenting and compiling it is a bit of a chore, but I've mastered it, not much more could be automated, it's just work...</p>
+            
+            <p>After front-end is updated, what is left now, is to be able to build with ÀLaMode, renaming the location of imported styles into the one provided by closure. It's needed to run <em>TrapCSS</em> on the bootstrap stylesheet so that only relevant selectors can be extracted. I've done it with <em>Akashic</em> by copying and pasting bits of code into HTML file, and running the library against it and boostrap. But I think I can create a script for browser, where I'll be able to specify a selector from which to get element, feed its innerHTML to trapcss against bootstrap, and repeat the process a few times for all possible states (e.g., hovering over a button). It can have minimal UI, and help to gather all selectors across interactions. Otherwise, I think it's a really difficult problem to do it pragmatically, since classes can be computed dynamically.</p>
+            
+            <div class="b-B">
+              <div class="b-yb">
+                <p>In other words, after I've managed to finish this work on JSX classes, CSS renaming and trapping selectors, I'll have a build operation for widgets, which fits into microservices strategy of web apps, and constitutes the client-side (browser JS) development process. On the one hand, there's Idio for back-end, on the other, Closure Stylesheets and Compiler for front-end, and linked via types that are maintained in XML, and can be documented in seconds. Put together, it'll become Irio, the best professional full-stack framework for NodeJS. And based on that, we'll be able to consult marketing businesses on setting up their simple, modern infrastructure and assist in development.</p>
+              </div>
+              <div class="b-xq b-kC b-yb">
+                <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 510px,(max-width: 1199.8px) 330px,398px" alt="microservices for your business" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='1000'/%3E">
+                <noscript>
+                  <picture>
+                    <source
+                      srcset="pages/index/img/1-576.webp 576w,pages/index/img/1-319.webp 319w,pages/index/img/1-750.webp 750w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 510px,(max-width: 1199.8px) 330px,398px"
+                      type="image/webp">
+                    <img class="b-t" onLoad="webploaded(this)" alt="microservices for your business" src="/blog/pages/index/img/1-576.JPG" srcset="pages/index/img/1-576.JPG 576w,pages/index/img/1-319.JPG 319w,pages/index/img/1-750.JPG 750w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 510px,(max-width: 1199.8px) 330px,398px">
+                  </picture>
+                </noscript>
+              </div>
+            </div>
+            
+            <strong>TODO</strong>
+            
+            <ul>
+              <li>come up with a strategy for automated edge testing that could populate a lot of values, i.e. specify a range to test the function against. there's a term for that.</li>
+              <li>provide JSX namespace for HTMLAttributes that contains bootstrap utilities.</li>
+              <li>write a guest post for dotsucks: open source sucks.</li>
+            </ul>
+            
+            <p class="SectionBreak">
+              <a title="Back To Top" href="#top">
+                <img alt="section break"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+            </p>
+            
             <h2 id="26-feb-2020">26 Feb 2020</h2>
             
             <p>Today was a chilled day, started with a Twitter now I know why people hang out there, it's quite fun when people crack jokes, had a go myself... If you're not joking you bring nothing to this world.</p>
@@ -158,7 +288,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
             
             <p><em>Idio</em> also then required fixing as frontend middleware dependent on the <span class="tm">resolve-package</span> which was broken because of <span class="tm">makepromise</span>. So I upgraded dependencies, and built it also. The actions could be good for building with Closure Compiler since they're so powerful, but I feel like I need control of my build step so that I can manually run <span class="tm">yarn lib/compile</span> and <span class="tm">yarn test-compile</span> to be able to fix issues. Or do I and it's just a bad habit that wastes a lot of time and could be avoided by working on a separate branch, and running a build step on master after a merge? nah. Also integrated the newly refreshed render for SSR rendering into <em>Idio</em> itself and wrote some documentation for that. <em>Documentary</em> needed an update to be able to use multiple parts from an example, e.g.,</p>
             
-            <pre id="ccdbf2"><code class="javascript hljs">import dep from 'dep'
+            <pre id="ccdbf"><code class="javascript hljs">import dep from 'dep'
 /* start example */
 import Code from 'code'
 /* end example */
@@ -195,7 +325,7 @@ import Code from 'code'
               <a title="Back To Top" href="#top">
                 <img alt="section break"
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+                <noscript><img alt="section break" src="/blog/section-breaks/2.svg"></noscript></a>
             </p>
             
             <h2 id="22-feb-2020">22 Feb 2020</h2>
@@ -220,14 +350,14 @@ import Code from 'code'
             
             <p>It's been known that <span class="tm">console.log</span> prints a <span class="tm">\n</span> and not <em>EOL</em> after the logged string. But another interesting observation is that template strings also always print <span class="tm">\n</span> regardless of the platform:</p>
             
-            <pre id="ccdbf"><code class="javascript hljs">const t = `hello
+            <pre id="ccdbf1"><code class="javascript hljs">const t = `hello
 world`</code></pre>
             
             <p>Counter-intuitive, even if the file is saved on a Windows machine, it the new line here is still <span class="tm">\n</span> and not <span class="tm">\r\n</span>. +1 to interview questions list ;)</p>
             
             <p>A lot of time today was spent on testing readline interface as well as forks can accept inputs, and the way I was testing it before, was just by writing questions to <span class="tm">process.stdout</span> and then pushing answers to <span class="tm">process.stdin</span>. That was totally fine on Mac, but on Windows, it's buggy. You need to create separate readable and writable streams for each new question, otherwise Node will freeze if trying to do this through the main process's streams. It can work one time but then stop working for all next times when asking questions. I've updated <span class="tm2">reloquent</span> so that a question now extends <em>ReadlineOptions</em> which means that for testing, I can be passing new streams, e.g.,</p>
             
-            <pre id="ccdbf1"><code class="javascript hljs">import { askSingle } from 'reloquent'
+            <pre id="ccdbf2"><code class="javascript hljs">import { askSingle } from 'reloquent'
 const output = new Catchment()
 const q = askSingle({
   text: 'My girl, Where did you sleep last night',
@@ -259,8 +389,8 @@ output.promise // =&gt; My girl, Where did you sleep last night</code></pre>
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/2.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/3.svg"></noscript></a>
             </p>
           </div>
         </div>

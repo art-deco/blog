@@ -22,7 +22,7 @@ const io = makeIo()
 /** @type {!Array<!preact.PreactProps>} */
 const meta = [{
   key: 'highlightjs',
-  id: 'ccdbf,ccdbf1,ccdbf2',
+  id: 'ccdbf,ccdbf1,ccdbf2,ccdbf3',
   props: {
     lang: 'javascript',
   },
@@ -43,6 +43,13 @@ const meta = [{
     timeout: 300,
   },
   children: ["\n  Please bear one moment while I add the content\n"],
+},
+{
+  key: 'highlightjs',
+  id: 'c1d47,c1d471',
+  props: {
+    lang: 'css',
+  },
 },
 {
   key: 'github-badge',

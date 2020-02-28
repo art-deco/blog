@@ -1,0 +1,112 @@
+## 27 Feb 2020
+
+Exactly one month from my birthday, where I sat at a pub drawing a diagram for photo-uploader.
+
+Really intense day although I don't even know what most of the time went on. Good stuff waka time is here for me for days like that. I started the day off by beginning an article on medium, and writing an intro to the new post, *Node.JS Image Upload Microservice*, it's going to be big and good. Having Idio makes making microservices a bliss, and it's a good business model -- to help startups set up their infrastructure, now we have Akashic.page for email subscriptions and web-pushes, and image upload. There's plenty more to explore, and provide consulting around those. The most amazing thing is that they are made with bespoke Art Deco software. London's calling.
+
+After the article, I got back on to working on the app, but there wasn't much to improve there hence anxiety again, so I needed to upgrade the MNP template for Idio, so that I can talk about using in the article as it's the easiest way to get started with it. This means I had to take bits out of akashic.page and start putting them into the template: types, tests and frontend were updated. I then took out `jsonErrors` middleware and made it common in the Idio server itself, to be reused. Found a bug when status code 500 was treated as client error. The chance of finding the error was actually 1% as the condition was `<= 500` so I could've put any other code above 500, and it would have passed :P
+
+<row mb-3>
+  <column md-6 >
+    <img rounded img-fluid src="./img/2.JPG" webp="photo" alt="anton" />
+  </column>
+  <column md-6>
+
+    Mentally I'm just feeling better because I stopped expecting anything from people it's clear they don't even know the meaning of class. I thought that people kind of posses culture turns out only a couple of people develop it. It sounds so fucking vain but how else can I speak about it if it's true. One thing is being stuck about it, another when I can literally feel a lot of passion about it, about nobility and culture. I don't know where it's from but it's the second time I get this euphoric feeling, and it comes after I'm less confused about the state of the world and understand the condition we're in. there's no problem i just kept forgetting and measured everything to my own standard. proper culture is everything, art, museums, music, books. not to say that family guy is not fun. but i don't know, just feeling better when knowing that i'm 5 years ahead of everyone with my work, and i don't have to prove it we'll see in a few years who's a weirdo then. i love down to earth people who could appreciate it and learn from me instead this fascist community who think they have "culture". days like this...
+
+  </column>
+</row>
+
+After Idio, went back to photo uploader. I already wrote some code a few years ago to rotate images based on their exif with CSS, called `vie-orientation-image`, which basically creates a container for an image, on which a transform is applied via CSS (but because the bounding box doesn't get rotated, it overflows), which hides the bounding box. But I think this is now possible to do on a canvas, because the upload already draws preview using canvas, to unload memory (a 250px wide photo is much smaller than 2000px which would lag in the browser).
+
+<p>
+  <img img-fluid src="./img/previews.png" webp="photo" alt="previews in the uploader" />
+</p>
+
+The front-end app is using Bootstrap, so some classes are set as `btn btn-sm`, for example, and additionally I followed the naming convention for capital letters in class names from CSS rules, e.g., `ImageInfo`. Therefore, I wanted to implement my old idea to integrate property names to class conversion in the transpiler. The main package that does JSX transpilation is `@idio/jsx`, which is then used by:
+
+<ul>
+  - _FrontEnd_, for live serving of JSX files from the server: DEVELOPMENT.
+  - _Depack_, when transpiling JSX prior to a build: PRODUCTION.
+  - _ÀLaMode_, during server-side rendering, and when building components for publishing: DISTRIBUTION.
+</ul>
+
+_JSX_ is massive, and is used in every area of web development. I linked frontend and updated class names in the photo-uploader:
+
+```jsx
+import { $Added, $Uploading, $Error, $HasInput, $Uploaded } from './styles/photo.css'
+
+render() {
+  return (<Copy error={error} hasInput={hasInput} processing={processing} src={src} uploaded={uploaded}>
+    <div Image position-relative w-100 h-100>
+      {!src &&
+        <span PreviewLoadingSpan position-absolute text-center>
+          {LOCALE.previewLoading}...
+        </span>}
+      <img src={src} mw-100 mh-100 />
+      <span ImageInfo style="top:0;left:0;">
+        {name}
+        {date && <br/>}
+        {date}
+      </span>
+      <span ImageInfo CloseSpan onClick={onRemove} overflow-hidden text-center>✕</span>
+      {!result && !error && progress === null &&
+        <BottomLeft style="background:transparent;" pl-0>
+          <a btn btn-light btn-sm onClick={this.uploadHandle}>
+            {LOCALE.upload}
+          </a>
+        </BottomLeft>
+      }
+    </div>
+  </Copy>
+}
+```
+
+Notice ``Image``, ``btn``, ``btn-light``, _etc_. When I could use bootstrap classes I did, and otherwise the rules come from stylesheets.
+
+```css
+.Image img {
+  border-radius: 3px;
+  transition: .5s;
+}
+.Image:hover img {
+  box-shadow: 0 0 19px 1px white;
+}
+```
+
+There's also an import of class names, as they will be renamed by Closure Stylesheets for production build. Front-end will simply export the names as they are (by parsing the stylesheet and extracting all classes based on `\.[\w\d-_]+` regex). Only lines that don't start with whitespace will be used to check for class names, so that values like `.5rem` don't end up as class names. It's a hack since indentation is not required in CSS, but it is now hehe. Who doesn't indent rules. That could fail for media queries though, so need more robust strategy. Basically parsing CSS is not regex-space since it can have multiple opening `{`, as in media queries
+
+```css
+@media (min-width: 500px) {
+  body {
+    color: green;
+  }
+}
+```
+
+So that we can't just look for what's between {} as it will match from first { to the next one, and not to the balancing one. But I've already solved that in JSX parser (it's a wonder it works). Fixed a few issues in JSX parser as well, making comments and blank properties possible. In other words, JSX received 3 new options: `prop2class` for conversion of CapitalLetter properties into class name, `classNames` to enable putting props into class name also, such as bootstrap prop, and `renameMap` so that those names could be remapped after Closure Stylesheets did its renaming job.
+
+`closure-stylesheets` is now a package that contains API to run Closure Stylesheets. It was extracted from Splendid, but making a new package, documenting and compiling it is a bit of a chore, but I've mastered it, not much more could be automated, it's just work...
+
+After front-end is updated, what is left now, is to be able to build with ÀLaMode, renaming the location of imported styles into the one provided by closure. It's needed to run _TrapCSS_ on the bootstrap stylesheet so that only relevant selectors can be extracted. I've done it with _Akashic_ by copying and pasting bits of code into HTML file, and running the library against it and boostrap. But I think I can create a script for browser, where I'll be able to specify a selector from which to get element, feed its innerHTML to trapcss against bootstrap, and repeat the process a few times for all possible states (e.g., hovering over a button). It can have minimal UI, and help to gather all selectors across interactions. Otherwise, I think it's a really difficult problem to do it pragmatically, since classes can be computed dynamically.
+
+<row>
+  <column lg-6>
+
+    In other words, after I've managed to finish this work on JSX classes, CSS renaming and trapping selectors, I'll have a build operation for widgets, which fits into microservices strategy of web apps, and constitutes the client-side (browser JS) development process. On the one hand, there's Idio for back-end, on the other, Closure Stylesheets and Compiler for front-end, and linked via types that are maintained in XML, and can be documented in seconds. Put together, it'll become Irio, the best professional full-stack framework for NodeJS. And based on that, we'll be able to consult marketing businesses on setting up their simple, modern infrastructure and assist in development.
+
+  </column>
+  <column lg-6 mb-3 text-center>
+    <img img-fluid src="./img/1.JPG" webp="photo" alt="microservices for your business" />
+  </column>
+</row>
+
+*TODO*
+
+<ul>
+  - come up with a strategy for automated edge testing that could populate a lot of values, i.e. specify a range to test the function against. there's a term for that.
+  - provide JSX namespace for HTMLAttributes that contains bootstrap utilities.
+  - write a guest post for dotsucks: open source sucks.
+</ul>
+
+<section-break />

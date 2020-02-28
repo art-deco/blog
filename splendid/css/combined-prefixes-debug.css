@@ -20,10 +20,22 @@
     -moz-box-flex: 0 0 25%;
     -webkit-flex: 0 0 25%;
   }
+  .col-md-6 {
+    -webkit-box-flex: 0 0 50%;
+    -moz-box-flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+  }
   .col-md-9 {
     -webkit-box-flex: 0 0 75%;
     -moz-box-flex: 0 0 75%;
     -webkit-flex: 0 0 75%;
+  }
+}
+@media (min-width:992px) {
+  .col-lg-6 {
+    -webkit-box-flex: 0 0 50%;
+    -moz-box-flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
   }
 }
 .rounded {
