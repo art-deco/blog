@@ -22,7 +22,7 @@ const io = makeIo()
 /** @type {!Array<!preact.PreactProps>} */
 const meta = [{
   key: 'highlightjs',
-  id: 'ccdbf,ccdbf1,ccdbf2,ccdbf3',
+  id: 'ccdbf,ccdbf1,ccdbf2,ccdbf3,ccdbf4',
   props: {
     lang: 'javascript',
   },
