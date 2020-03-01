@@ -2,13 +2,22 @@
  * @type {import('splendid').Page}
  */
 export const index = {
-  title: 'Blog',
-  seo: 'The 150-160 characters search engine meta:description',
+  title: 'March 2020',
+  seo: 'Spring is here.',
   og: {
     image: '/img/logo.jpg',
   },
-  links: {
-    gutenberg: 'https://www.gutenberg.org/files/84/84-h/84-h.htm',
+  reverse: true,
+}
+
+/**
+ * @type {import('splendid').Page}
+ */
+export const feb = {
+  title: 'February 2020',
+  seo: 'Starting to write a new blog about work.',
+  og: {
+    image: '/img/logo.jpg',
   },
   reverse: true,
 }

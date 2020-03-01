@@ -1,4 +1,4 @@
-## 22 Feb 2020
+##! 22 February Sat
 
 Today was pretty intense. Started with wanted to fix failing Appveyor build for _Zoroaster_. This required looking into masks which were the reason builds were failing. From masks, I investigated forks as I initially thought that preprocessing doesn't get applied to inputs, but it wasn't the case. Instead, I added the `normaliseOutputs` option to forks so that outputs are consistent across platforms (replacing `\n` with `\r\n` on Win).
 

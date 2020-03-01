@@ -8,13 +8,13 @@ const renameMaps = { 'styles/sidebar.css': __renameMap0,
 __initOnThisPage(),__initSidebar()
 import { Component, render, h } from '@externs/preact'
 import { makeIo, init, start } from './__competent-lib'
-import Ellipsis from '../components/ellipsis.jsx'
 import GithubBadge from '../components/github-badge.jsx'
+import Highlightjs from 'splendid/build/components/highlightjs'
 import SocialButtons from 'splendid/build/components/social-buttons'
 
 const __components = {
-  'ellipsis': Ellipsis,
   'github-badge': GithubBadge,
+  'highlightjs': Highlightjs,
   'social-buttons': SocialButtons,
 }
 
@@ -23,20 +23,26 @@ const io = makeIo()
 /** @type {!Array<!preact.PreactProps>} */
 const meta = [{
   key: 'social-buttons',
-  id: 'c93ef',
+  id: 'c4885',
   props: {
-    url: 'https://art-deco.github.io/blog/',
+    url: 'https://art-deco.github.io/blog/february-2020.html',
     meta: true,
     className: 'b-xq b-Hk',
   },
 },
 {
-  key: 'ellipsis',
-  id: 'ceb55',
+  key: 'highlightjs',
+  id: 'ccdbf,ccdbf1,ccdbf2,ccdbf3,ccdbf4',
   props: {
-    timeout: 300,
+    lang: 'javascript',
   },
-  children: ["\n  Please bear one moment while I add the content\n"],
+},
+{
+  key: 'highlightjs',
+  id: 'c1d47,c1d471',
+  props: {
+    lang: 'css',
+  },
 },
 {
   key: 'github-badge',
