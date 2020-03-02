@@ -6,6 +6,14 @@ const config = {
       re: /{{ company }}/g,
       replacement: '[Art Deco™](https://www.artd.eco)',
     },
+    {
+      re: / (GitHub( Actions)|Idio|Splendid) /g,
+      replacement: ' _$1_ ',
+    },
+    {
+      re: /^(GitHub( Actions)|Idio|Splendid) /gm,
+      replacement: '_$1_ ',
+    },
   ],
   pages: '../pages',
   elements: ['elements'],

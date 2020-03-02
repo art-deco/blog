@@ -10,11 +10,13 @@ import { Component, render, h } from '@externs/preact'
 import { makeIo, init, start } from './__competent-lib'
 import Ellipsis from '../components/ellipsis.jsx'
 import GithubBadge from '../components/github-badge.jsx'
+import Highlightjs from 'splendid/build/components/highlightjs'
 import SocialButtons from 'splendid/build/components/social-buttons'
 
 const __components = {
   'ellipsis': Ellipsis,
   'github-badge': GithubBadge,
+  'highlightjs': Highlightjs,
   'social-buttons': SocialButtons,
 }
 
@@ -22,6 +24,24 @@ const io = makeIo()
 
 /** @type {!Array<!preact.PreactProps>} */
 const meta = [{
+  key: 'ellipsis',
+  id: 'c06ef',
+},
+{
+  key: 'highlightjs',
+  id: 'c1953',
+  props: {
+    lang: 'markdown',
+  },
+},
+{
+  key: 'highlightjs',
+  id: 'ccdbf',
+  props: {
+    lang: 'javascript',
+  },
+},
+{
   key: 'social-buttons',
   id: 'c93ef',
   props: {

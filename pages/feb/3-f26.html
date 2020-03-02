@@ -3,13 +3,13 @@
 Today was a chilled day, started with a Twitter now I know why people hang out there, it's quite fun when people crack jokes, had a go myself... If you're not joking you bring nothing to this world.
 
 <p>
-  <img img-fluid src="./img/twitter.png" alt="The higher we soar the smaller we appear to those who cannot fly. Seems like Nietzsche is year 1 plan in Seagulls school." placeholder-auto />
+  <img img-fluid src="./img/twitter.png" alt="The higher we soar the smaller we appear to those who cannot fly. Seems like Nietzsche is year 1 plan in Seagulls school." />
 </p>
 
 A person gave me 50 claps on Medium for a post on compiling Koa. What legend. The rest? I show them how to compile Node.JS packages, and people don't want to publish it on a newsletter... People's arrogance is pulsating through the screen. Light years ahead of everyone they can't even click the significance of this. But those claps made my day. I know my audience and they've made the right choice :)
 
 <p>
-  <img img-fluid src="./img/clap.gif" alt="Why would anyone be such a dick as not to give people 50 claps on #medium every time?" placeholder-auto />
+  <img img-fluid src="./img/clap.gif" alt="Why would anyone be such a dick as not to give people 50 claps on #medium every time?" />
 </p>
 
 From Twitter moving on to work. It's painful to get back to doing programming on a project after a break as there's a bit of anxiety of how to start but I'm glad I was procrastinating on GitHub checking open issues, on `exif2css` so that got me back to the photo uploader. Started working on the `images.artdeco.app` which is a microservice that can receive images and resize them, without having to install sharp on each other app that needs such functionality. I thought I could update Docker image to Node 12, but it wasn't starting since JSX wasn't being parsed properly. I thought it was because of the `@depack/render` which didn't get updated but the transpilation happens in ÀLaMode and not rendering therefore I'm still not sure what happened. Upgraded `render` package though to provide ``api.xml`` to expose the method via API, which was used later now.
@@ -40,7 +40,7 @@ For dinner had [kale carrot](https://www.fabfood4all.co.uk/kale-soup/) soup with
 The rest of the day, spent working on the image uploader, in particular extracting only the needed bits from `azure-storage` package that are required to PUT blobs on storage. In the end, I had 2 files, an understanding of Azure's REST and its signing mechanism, and cut 390 lines from yarn.lock by removing their library which is 25% of the whole dependency dept. Super happy about it. The process consisted of debugging what their client is doing and taking bits of their code. I've kind of adapted it for my own style, as the `rqt` will add `Content-Type` header using capital letters but signing worked for `content-type` and same with `content-length` however it's not important on their servers, they just want the signature to be correct. The goal is to then write an article about the image uploader to start that content rolling on _Medium_ which is quite fun, and could be used to talk about _Idio_.
 
 <p>
-  <img img-fluid src="./img/debt.png" alt="Removing 390 lines from yarn.lock by implementing custom rest api client for azure blob storage" placeholder-auto />
+  <img img-fluid src="./img/debt.png" alt="Removing 390 lines from yarn.lock by implementing custom rest api client for azure blob storage" />
 </p>
 
 *TODO*

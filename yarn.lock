@@ -2,25 +2,18 @@
 # yarn lockfile v1
 
 
-"@externs/preact@^1.2.9":
+"@externs/preact@^1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@externs/preact/-/preact-1.3.1.tgz#d97745283c30834b569399be0d85286ab7f02d80"
   integrity sha512-B6QUjtgqPCzKWpLdZ8YCCPQv2/iECNJ/JBHVy76cWWN/JPOP+HhOGxWRiEo5f1xg0A1ouf0Ca4cLfqX34W+rbQ==
 
-"@idio/idio@^1.2.3":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@idio/idio/-/idio-1.3.0.tgz#1aba1e547f4b56818011d07b802edc0954167100"
-  integrity sha512-VDYFSBQdW/l6D5QCms/XoCqU8FqhcgZdToIQGiSX2i/PBmptrgQE9BIlaJEQPgcK7nYTKg70sOgCV6NnNfwwjA==
+"@idio/idio@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@idio/idio/-/idio-1.5.0.tgz#43207f805a7128b19c587b0b78310a6a7863d901"
+  integrity sha512-TKCS+I5FFRzQQ9m5F0H+v+WhVR8Z1QVTk3k3C8wU2X+JoveTEA3NBRlK6tuS+8eX/3FyqnQe45j4/rdXW+IXdQ==
   dependencies:
     mime-db "^1.43.0"
     text-decoding "^1.0.0"
-
-"@idio/websocket@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@idio/websocket/-/websocket-1.0.0.tgz#43b02ce185f7da73104f0e3fb2d920b9c017baed"
-  integrity sha512-zziQTJW5UMgXS3RELr5D6VKLRMDWJ2z4wmoXhBmA7g8XJC1C2+yjv3/XjbFMaQVD4djPvuTk7/EiMfFLaTH7tA==
-  dependencies:
-    erte "1.1.6"
 
 "@lemuria/absolute-proxy@^1.0.2":
   version "1.0.2"
@@ -52,7 +45,7 @@
   resolved "https://registry.yarnpkg.com/@zoroaster/mask/-/mask-2.6.1.tgz#bbb2c2a43e126e1fcb5de0a0c37192f1f7cc426e"
   integrity sha512-KTHuxgzt8cQCs53H/EEWc3MaPVNyZXrcTYGLY7soiIBJiAsTpBJezCEsWn14Qhrf0UTVGI6EDE0SYQS9hfSjVg==
 
-alamode@^3.3.3, alamode@^3.5.0, alamode@^3.5.2:
+alamode@^3.3.3, alamode@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/alamode/-/alamode-3.5.2.tgz#0d6fd9a4bbfaf3ecc488d636264c480a825e9bd4"
   integrity sha512-lKEFyLAYj6I6WURR7YYaclGpQNPwCoPYkbYZSl5vka9n15cfZlSbPkrzivB6F6IXEkAtt7jGAl60V3qyPTEwdQ==
@@ -71,11 +64,6 @@ delegate@^3.1.2:
   resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
   integrity sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
 
-diff@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.1.tgz#0c667cb467ebbb5cea7f14f135cc2dba7780a8ff"
-  integrity sha512-s2+XdvhPCOF01LRQBC8hf4vhbVmI2CGS5aZnxLJlT5FtdhPCDFq80q++zK2KlrVorVDdL5BOGZ/VfLrVtYNF+Q==
-
 documentary@^1.37.1:
   version "1.37.1"
   resolved "https://registry.yarnpkg.com/documentary/-/documentary-1.37.1.tgz#8ba6cb8094d0da4d5d70ffab3e1e9d4066d0a592"
@@ -84,13 +72,6 @@ documentary@^1.37.1:
     alamode "^3.5.2"
     preact "8.5.3"
     typal "^1.26.2"
-
-erte@1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/erte/-/erte-1.1.6.tgz#78f1eade69151dde1acaa5bd3970d57ba2d45f72"
-  integrity sha512-NQ6KXfFeGPM7ct2cCKVyz2K2xxM19ugXIYMzTt5eTR70KYnyK2jjZzkNf5aahZplPaBH8B68ySc6MfLO+Jdb7w==
-  dependencies:
-    diff "4.0.1"
 
 good-listener@^1.2.2:
   version "1.2.2"
@@ -126,22 +107,27 @@ select@^1.1.2:
   resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
   integrity sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
 
-splendid@^1.17.1:
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/splendid/-/splendid-1.17.1.tgz#6353e50ac398c3d83ab89b3bbe4eba7db5e95e0d"
-  integrity sha512-SMEh58zFOrX8T4HtCQyhlomFdbh2N9N6a5nqodHy9ldj16hJZAJURqZeppkoW2WrldiASUFSDsPxjwWQNrCY0g==
+splendid-web-components@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/splendid-web-components/-/splendid-web-components-1.0.0.tgz#6bc9cbef8254f96c2102a00e979e4dc3537c9cbb"
+  integrity sha512-oZOB2VaEoLEA/WS+SX5KybIjsm1ua3dzkqWaE1C1CAaI/hhCohA//u0WyF7YGOyph164++Wdb8dpoA0lqK5N1g==
+
+splendid@^1.17.10:
+  version "1.17.10"
+  resolved "https://registry.yarnpkg.com/splendid/-/splendid-1.17.10.tgz#fbb7dac65d74a32df662ae404d45eba29fd3283e"
+  integrity sha512-+Kggz5SUvdER+pZNkZzgdgo1VFTA8GrUv3ttme3NHc7Ra0rbi5W9ZxP9OKeyANB/AbpCaMqVz96o02nirB6wLA==
   dependencies:
-    "@externs/preact" "^1.2.9"
-    "@idio/idio" "^1.2.3"
-    "@idio/websocket" "^1.0.0"
+    "@externs/preact" "^1.3.1"
+    "@idio/idio" "^1.5.0"
     "@lemuria/absolute-proxy" "^1.0.2"
     "@lemuria/font" "^1.0.4"
     "@lemuria/load-scripts" "^1.2.0"
     "@lemuria/popup" "^1.1.1"
-    alamode "^3.5.0"
+    alamode "^3.5.2"
     highlight.js "^9.18.1"
     preact "8.5.3"
     prismjs "1.19.0"
+    splendid-web-components "^1.0.0"
 
 text-decoding@^1.0.0:
   version "1.0.0"

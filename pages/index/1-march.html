@@ -1,0 +1,29 @@
+## 1 March Sun
+
+A lot of sleeping today. Listening to Zoroastrian prayers on iPhone, it's pretty chilled. One of the main principles of Tao is `Pu`: a Chinese word meaning "unworked wood". The mind is the one that discriminates while in reality things are unworked. But if I can just listen to beautiful Avestian while not getting my head stuffed with other shit prevalent in religion, others take it too seriously. This is to the point, if I like Avestian, don't others who are passionate about other stuff, deserve to listen to what they like? One thing is to just listen to some calming speech you don't understand, another one is to get stuck around fake concepts. But to each his own, isn't.
+
+Worked more on frontend and enabled hot reload for CSS and standard JS files. Integrated it into _Idio_ with documentation. Moreover, Idio now also receives _JSON Body_ middleware to parse incoming JSON requests easily. Started to make `idio` website. Found a bug on GitHub that prevents you from adding a WWW domain if you've set up an apex domain already (e.g., I had idio.cc so I couldn't set up www.idio.cc). The website doesn't work from Canada because cc domain doesn't get resolved which isn't great.
+
+Updated Splendid template for Idio, as well as made changes to Splendid itself to include closure-stylesheets as STDLIB. Fixed paragraphs extraction which wasn't forking properly before. An interesting point is that regexes are sticky, which prevents matching multiple consecutive paragraphs
+
+```markdown
+
+We want to match
+
+-- start
+
+Hello world
+
+Foo Bar
+
+-- end
+```
+
+```js
+// regex to match this:
+const regex = \n\n[^\s<][\s\S]+\n\n
+```
+
+The regex makes sense, but because the first match will end with `\n\n`, they won't be included for the next match which means the paragraph won't be detected. The example is simplified, but it conveys the point. The work around is<ellipsis /> To simply run the regex twice :) Because we don't want to match tags (`[^<]`), the first pass will create a paragraph tag `<p>Hello World</p>`, but the second time it will remain unmatched, so that the next paragraph can be detected. It's good it's working properly now.
+
+<section-break />
