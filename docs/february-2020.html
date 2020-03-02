@@ -23,7 +23,7 @@
       (function(b){var a=document.createElement("link");a.href=b;a.rel="stylesheet";a.crossOrigin="crossorigin";document.head.appendChild(a)})('https://fonts.googleapis.com/css?family=Source%20Code%20Pro')
     </script>
     <script>(function(h,r){var a=Object.keys(h),c=!0;"CSS"in window&&"supports"in CSS?(a=a.reduce(function(k,b){var l=h[b];b=b.split("|");for(var m=!1,d={},f=0;f<b.length;d={a:d.a},f++)if(d.a=b[f],l.map(function(n){return function(e){e=e.split("|");for(var p=!1,g=0;g<e.length;g++){var q=e[g];if(CSS.supports(n.a,q)){p=!0;break}else k.push(n.a+": "+q)}return p}}(d)).filter(Boolean).length==l.length){m=!0;break}m||(c=!1);return k},[]),a.length?c&&console.log("\ud83d\udcbf Browser does not support CSS properties: %s",
-a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser supports all modern CSS properties.")):(c=!1,console.log("\ud83d\udce0 Browser does not support CSS checks."));c||(a=document.createElement("link"),a.rel="stylesheet",a.href=r,document.head.appendChild(a))})({"border-radius":[".25rem"],"box-shadow":["none"],"flex|-ms-flex":["0 0 25%"],"display":["flex|-ms-flexbox"],"hyphens|-webkit-hyphens|-ms-hyphens":["auto"],"flex-shrink|-ms-flex-negative":["0"],"position":["sticky|-webkit-sticky"],"flex-wrap|-ms-flex-wrap":["wrap"],"box-sizing":["border-box"],"flex-direction|-ms-flex-direction":["column"]}, '/blog/css/combined-prefixes.css')</script>
+a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser supports all modern CSS properties.")):(c=!1,console.log("\ud83d\udce0 Browser does not support CSS checks."));c||(a=document.createElement("link"),a.rel="stylesheet",a.href=r,document.head.appendChild(a))})({"border-radius":["2px"],"box-shadow":["none"],"flex|-ms-flex":["0 0 25%"],"display":["flex|-ms-flexbox"],"hyphens|-webkit-hyphens|-ms-hyphens":["auto"],"flex-shrink|-ms-flex-negative":["0"],"position":["sticky|-webkit-sticky"],"flex-wrap|-ms-flex-wrap":["wrap"],"box-sizing":["border-box"],"flex-direction|-ms-flex-direction":["column"]}, '/blog/css/combined-prefixes.css')</script>
     <script>
       (function(q,k){function x(a){for(var f=/url\((.+?)\).*?;\s+unicode-range: (.+?);/g,b={},d=[],h;h=f.exec(a);){var r=h[2];d.push({url:h[1],a:r});b[r]=1}b=Object.keys(b).reduce(function(c,e){var g=e.split(/,\s/).map(function(l){return l.replace("U+","\\u").replace("-","-\\u")}).join("").toLowerCase();c[e]=new RegExp("["+g+"]");return c},{});var t=document.body?document.body.textContent:"",y=t?Object.keys(b).reduce(function(c,e){b[e].test(t)&&(c[e]=!0);return c},{}):Object.keys(b).reduce(function(c,
       e){e in k&&(c[e]=!0);return c},{});m=d.filter(function(c){return c.a in y}).map(function(c){return c.url});if(!m.length)return u();var v=document.createDocumentFragment();m.forEach(function(c,e){var g=document.createElement("link");g.href=c;g.rel="preload";g.as="font";var l=e+1;;g.onload=function(){return u(l)};g.setAttribute("crossorigin",!0);v.appendChild(g)});document.head.appendChild(v)}k=void 0===k?{}:k;var n=document.createElement("link");if(function(a,
@@ -77,7 +77,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 
                 <a
                   title="Static Web Site Compiler That Uses Closure Compiler For JS Bundling And Closure Stylesheets For CSS optimisations. Supports JSX Syntax To Write Static Elements And Dynamic Preact Components." class="NPMBadge" href="https://www.npmjs.com/package/splendid">
-                  <span class="a"><em>Splendid</em></span><span class="b">1.17.1</span></a>
+                  <span class="a"><em>Splendid</em></span><span class="b">1.17.10</span></a>
               </div>
               <h3 id="pages">Pages</h3>
               <ul><li class><a data-file="index" href="/blog/">March 2020</a></li><li class="Active"><a data-file="feb" href="/blog/february-2020.html">February 2020</a></li></ul>
@@ -197,9 +197,9 @@ console.log(i) // 5</code></pre>
             
             <p>Exactly one month from my birthday, where I sat at a pub drawing a diagram for photo-uploader.</p>
             
-            <p>Really intense day although I don't even know what most of the time went on. Good stuff waka time is here for me for days like that. I started the day off by beginning an article on medium, and writing an intro to the new post, <strong>Node.JS Image Upload Microservice</strong>, it's going to be big and good. Having Idio makes making microservices a bliss, and it's a good business model -- to help startups set up their infrastructure, now we have Akashic.page for email subscriptions and web-pushes, and image upload. There's plenty more to explore, and provide consulting around those. The most amazing thing is that they are made with bespoke Art Deco software. London's calling.</p>
+            <p>Really intense day although I don't even know what most of the time went on. Good stuff waka time is here for me for days like that. I started the day off by beginning an article on medium, and writing an intro to the new post, <strong>Node.JS Image Upload Microservice</strong>, it's going to be big and good. Having <em>Idio</em> makes making microservices a bliss, and it's a good business model -- to help startups set up their infrastructure, now we have Akashic.page for email subscriptions and web-pushes, and image upload. There's plenty more to explore, and provide consulting around those. The most amazing thing is that they are made with bespoke Art Deco software. London's calling.</p>
             
-            <p>After the article, I got back on to working on the app, but there wasn't much to improve there hence anxiety again, so I needed to upgrade the MNP template for Idio, so that I can talk about using in the article as it's the easiest way to get started with it. This means I had to take bits out of akashic.page and start putting them into the template: types, tests and frontend were updated. I then took out <span class="tm">jsonErrors</span> middleware and made it common in the Idio server itself, to be reused. Found a bug when status code 500 was treated as client error. The chance of finding the error was actually 1% as the condition was <span class="tm">&lt;= 500</span> so I could've put any other code above 500, and it would have passed :P</p>
+            <p>After the article, I got back on to working on the app, but there wasn't much to improve there hence anxiety again, so I needed to upgrade the MNP template for Idio, so that I can talk about using in the article as it's the easiest way to get started with it. This means I had to take bits out of akashic.page and start putting them into the template: types, tests and frontend were updated. I then took out <span class="tm">jsonErrors</span> middleware and made it common in the <em>Idio</em> server itself, to be reused. Found a bug when status code 500 was treated as client error. The chance of finding the error was actually 1% as the condition was <span class="tm">&lt;= 500</span> so I could've put any other code above 500, and it would have passed :P</p>
             
             <div class="b-B b-xq">
               <div class="b-kb">
@@ -221,13 +221,12 @@ console.log(i) // 5</code></pre>
             <p>After Idio, went back to photo uploader. I already wrote some code a few years ago to rotate images based on their exif with CSS, called <span class="tm">vie-orientation-image</span>, which basically creates a container for an image, on which a transform is applied via CSS (but because the bounding box doesn't get rotated, it overflows), which hides the bounding box. But I think this is now possible to do on a canvas, because the upload already draws preview using canvas, to unload memory (a 250px wide photo is much smaller than 2000px which would lag in the browser).</p>
             
             <p>
-              <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px" alt="previews in the uploader" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='629' height='272'/%3E">
+              <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,629px" alt="previews in the uploader" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='629' height='272'/%3E">
               <noscript>
                 <picture>
                   <source
-                    srcset="/blog/pages/feb/img/previews-576.webp 576w,/blog/pages/feb/img/previews-319.webp 319w,/blog/pages/feb/img/previews-629.webp 629w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px"
-                    type="image/webp">
-                  <img class="b-t" onLoad="webploaded(this)" alt="previews in the uploader" src="/blog/pages/feb/img/previews-576.png" srcset="/blog/pages/feb/img/previews-576.png 576w,/blog/pages/feb/img/previews-319.png 319w,/blog/pages/feb/img/previews-629.png 629w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px">
+                    srcset="/blog/pages/feb/img/previews-576.webp 576w,/blog/pages/feb/img/previews-319.webp 319w,/blog/pages/feb/img/previews-629.webp 629w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,629px" type="image/webp">
+                  <img class="b-t" onLoad="webploaded(this)" alt="previews in the uploader" src="/blog/pages/feb/img/previews-576.png" srcset="/blog/pages/feb/img/previews-576.png 576w,/blog/pages/feb/img/previews-319.png 319w,/blog/pages/feb/img/previews-629.png 629w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,629px">
                 </picture>
               </noscript>
             </p>
@@ -295,7 +294,7 @@ render() {
             
             <div class="b-B">
               <div class="b-yb">
-                <p>In other words, after I've managed to finish this work on JSX classes, CSS renaming and trapping selectors, I'll have a build operation for widgets, which fits into microservices strategy of web apps, and constitutes the client-side (browser JS) development process. On the one hand, there's Idio for back-end, on the other, Closure Stylesheets and Compiler for front-end, and linked via types that are maintained in XML, and can be documented in seconds. Put together, it'll become Irio, the best professional full-stack framework for NodeJS. And based on that, we'll be able to consult marketing businesses on setting up their simple, modern infrastructure and assist in development.</p>
+                <p>In other words, after I've managed to finish this work on JSX classes, CSS renaming and trapping selectors, I'll have a build operation for widgets, which fits into microservices strategy of web apps, and constitutes the client-side (browser JS) development process. On the one hand, there's <em>Idio</em> for back-end, on the other, Closure Stylesheets and Compiler for front-end, and linked via types that are maintained in XML, and can be documented in seconds. Put together, it'll become Irio, the best professional full-stack framework for NodeJS. And based on that, we'll be able to consult marketing businesses on setting up their simple, modern infrastructure and assist in development.</p>
               </div>
               <div class="b-xq b-kC b-yb">
                 <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 510px,(max-width: 1199.8px) 330px,398px" alt="microservices for your business" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='1000'/%3E">
@@ -351,7 +350,8 @@ render() {
             
             <p>Then <em>Depack</em> also had to be updated, and static-analysis because of that Node 12 bug with <span class="tm">makePromise</span> that broke pretty much all code in so many packages, but I'm getting back on track. That's the downside of compilation as it's the same as fixing package version, so that you have to go back to each package and recompile it to statically link new code which wouldn't have been the case if it was a dependency with non-fixed version.</p>
             
-            <p>Started using GitHub Actions which are really awesome: 7GB memory, Windows / Linux / Mac containers? Shut Up and don't take any of my money for 2000 free minutes per month. <img alt="ci badge from actions" data-io>
+            <p>Started using <em>GitHub Actions</em> which are really awesome: 7GB memory, Windows / Linux / Mac containers? Shut Up and don't take any of my money for 2000 free minutes per month. <img alt="ci badge from actions"
+               src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='181' height='40'/%3E" data-io>
              <noscript><img alt="ci badge from actions" src="/blog/pages/feb/img/ci.png"></noscript></p>
             
             <p><em>Idio</em> also then required fixing as frontend middleware dependent on the <span class="tm">resolve-package</span> which was broken because of <span class="tm">makepromise</span>. So I upgraded dependencies, and built it also. The actions could be good for building with Closure Compiler since they're so powerful, but I feel like I need control of my build step so that I can manually run <span class="tm">yarn lib/compile</span> and <span class="tm">yarn test-compile</span> to be able to fix issues. Or do I and it's just a bad habit that wastes a lot of time and could be avoided by working on a separate branch, and running a build step on master after a merge? nah. Also integrated the newly refreshed render for SSR rendering into <em>Idio</em> itself and wrote some documentation for that. <em>Documentary</em> needed an update to be able to use multiple parts from an example, e.g.,</p>
@@ -385,7 +385,7 @@ import Code from 'code'
             <ul>
               <li>ÀLaNode stopped working because I built it on Windows and the shebang ends with <span class="tm">\r</span> which breaks interpreter... The <span class="tm">\r</span> appeared because of automatic crln in git config, which basically means I need to switch it off, or run a regex on pre-publish script on windows to remove <span class="tm">\r</span>.</li>
               <li>Find out what's going on with Documentary's forks which prevent proper compilation of its wiki.</li>
-              <li>Upload images on GitHub from image uploader, and hookup repo to GitHub Actions which will generate previews!</li>
+              <li>Upload images on GitHub from image uploader, and hookup repo to <em>GitHub Actions</em> which will generate previews!</li>
               <li>Extract the image rotation js code from vue gallery that actually changes the dimensions of the container when a photo is rotated.</li>
             </ul>
             
@@ -403,7 +403,7 @@ import Code from 'code'
             <p>Today was pretty intense. Started with wanted to fix failing Appveyor build for <em>Zoroaster</em>. This required looking into masks which were the reason builds were failing. From masks, I investigated forks as I initially thought that preprocessing doesn't get applied to inputs, but it wasn't the case. Instead, I added the <span class="tm">normaliseOutputs</span> option to forks so that outputs are consistent across platforms (replacing <span class="tm">\n</span> with <span class="tm">\r\n</span> on Win).</p>
             
             <p>
-              <img class="b-Ik b-t" alt="appveyor screenshot" data-io>
+              <img class="b-Ik b-t" alt="appveyor screenshot" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='783' height='766'/%3E" data-io>
               <noscript><img class="b-Ik b-t" alt="appveyor screenshot" src="/blog/pages/feb/img/appveyor.png"></noscript>
             </p>
             
@@ -412,7 +412,7 @@ import Code from 'code'
             <p>A lot of tests in ÀLaMode and masks had to be updated to be cross-platform too. This typically involves normalising forks' outputs and snapshots outputs also. Apveyor by default will clone the repo using <span class="tm">input</span> crln, but my config is <span class="tm">auto</span> therefore the tests were failing for <em>Zoroaster</em>, as mask results are extracted using EOL which isn't robust. For now, the <span class="tm2">auto</span> strategy is good enough, but when <span class="tm">\n</span> is encountered on Win, instead of <span class="tm">\r\n</span>, mask will fail.</p>
             
             <p>
-              <img class="b-Ik b-t" alt="appveyor badge" data-io>
+              <img class="b-Ik b-t" alt="appveyor badge" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='306' height='123'/%3E" data-io>
               <noscript><img class="b-Ik b-t" alt="appveyor badge" src="/blog/pages/feb/img/badge.png"></noscript>
             </p>
             
@@ -445,7 +445,7 @@ output.promise // =&gt; My girl, Where did you sleep last night</code></pre>
             <p>This also unloads logging from the main console when writing tests. A disadvantage is that if my API for <span class="tm2">reloquent</span> supported a simple string as a question, I'll be passing an object instead so that I'm not covering the string feature any more. This can result in errors. So it's good to have another tests covering simple strings, but it's impossible... The solution is to create a fork and write to its stdin via a separate process. This will ensure 100% test coverage. Likely with Zoroaster's mask testing it's really easy to do. Also <em>Documentary</em>'s forks can be used to combine this feature with documentation generation.</p>
             
             <p>
-              <img class="b-Ik b-t" alt="vs code screenshot" data-io>
+              <img class="b-Ik b-t" alt="vs code screenshot" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1090' height='741'/%3E" data-io>
               <noscript><img class="b-Ik b-t" alt="vs code screenshot" src="/blog/pages/feb/img/code.png"></noscript>
             </p>
             
