@@ -22,19 +22,19 @@ const io = makeIo()
 
 /** @type {!Array<!preact.PreactProps>} */
 const meta = [{
-  key: 'social-buttons',
-  id: 'c4885',
-  props: {
-    url: 'https://art-deco.github.io/blog/february-2020.html',
-    meta: true,
-    className: 'b-xq b-Hk',
-  },
-},
-{
   key: 'highlightjs',
   id: 'ccdbf,ccdbf1,ccdbf2,ccdbf3,ccdbf4',
   props: {
     lang: 'javascript',
+  },
+},
+{
+  key: 'social-buttons',
+  id: 'c26d2',
+  props: {
+    url: 'https://art-deco.github.io/blog/february.html',
+    meta: true,
+    className: 'b-xq b-Hk',
   },
 },
 {

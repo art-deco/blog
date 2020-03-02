@@ -2,7 +2,7 @@
 <html class="no-js b-Op" lang="en">
   <head>
     <meta charset="utf-8">
-    <title>March 2020</title>
+    <title>March</title>
     <meta content="Spring is here." name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link sizes="57x57" rel="apple-touch-icon" href="/blog/img/favicon-57.png">
@@ -87,7 +87,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                   </picture>
                 </noscript>
               </div>
-              <div class="b-kC">
+              <div class="b-kC b-xq">
                 <a title="Blog About Node.JS Development." class="GitHubBadge" id="cc3eb"
                   href="https://github.com/art-deco/blog">
                   <span class="a">GitHub</span><span class="b" data-stargazers>⭐️ 1</span></a>
@@ -97,13 +97,13 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                   title="Static Web Site Compiler That Uses Closure Compiler For JS Bundling And Closure Stylesheets For CSS optimisations. Supports JSX Syntax To Write Static Elements And Dynamic Preact Components." class="NPMBadge" href="https://www.npmjs.com/package/splendid">
                   <span class="a"><em>Splendid</em></span><span class="b">1.17.10</span></a>
               </div>
-              <h3 id="pages">Pages</h3>
-              <ul><li class="Active"><a data-file="index" href="/blog/">March 2020</a></li><li class><a data-file="feb" href="/blog/february-2020.html">February 2020</a></li></ul>
+              <h3 id="pages-2020">Pages 2020</h3>
+              <ul><li class="Active"><a data-file="index" href="/blog/">March</a></li><li class><a data-file="feb" href="/blog/february.html">February</a></li></ul>
               <div class="SideBarMenu sidebarshowing b-jr b-zp">
                 <div class="a">
                   
                                   <h3 id="on-this-page">On This Page</h3>
-                                  <ul class="OnThisPage"></ul>
+                                  <ul class="OnThisPage"><li data-heading="1-march-sun"><a href="#1-march-sun">1 March Sun</a></li></ul>
                                   <span class="b-xq b-Hk" id="c93ef"><span class="b-Hk" style="height:32px" data-loading>Loading sharing buttons...</span><noscript>Please enable JavaScript to Share</noscript></span>
                                 
                 </div>
@@ -132,7 +132,8 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 <noscript><img alt="section break" src="/blog/section-breaks/0.svg"></noscript></a>
             </p>
             
-            <h2 id="1-march-sun">1 March Sun</h2>
+            <div data-section id="1-march-sun">
+            <h2>1 March Sun</h2>
             
             <p>A lot of sleeping today. Listening to Zoroastrian prayers on iPhone, it's pretty chilled. One of the main principles of Tao is <span class="tm">Pu</span>: a Chinese word meaning "unworked wood". The mind is the one that discriminates while in reality things are unworked. But if I can just listen to beautiful Avestian while not getting my head stuffed with other shit prevalent in religion, others take it too seriously. This is to the point, if I like Avestian, don't others who are passionate about other stuff, deserve to listen to what they like? One thing is to just listen to some calming speech you don't understand, another one is to get stuck around fake concepts. But to each his own, isn't.</p>
             
@@ -140,21 +141,22 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
             
             <p>Updated <em>Splendid</em> template for Idio, as well as made changes to <em>Splendid</em> itself to include closure-stylesheets as STDLIB. Fixed paragraphs extraction which wasn't forking properly before. An interesting point is that regexes are sticky, which prevents matching multiple consecutive paragraphs</p>
             
-            <pre id="c1953"><code class="markdown hljs">
-We want to match
+            <pre id="c1953"><code class="markdown hljs">We want to match
 
 -- start
 
-Hello world
+Paragraph 1: Hello world
 
-Foo Bar
+Paragraph 2: Foo Bar
 
 -- end</code></pre>
             
             <pre id="ccdbf"><code class="javascript hljs">// regex to match this:
-const regex = \n\n[^\s&lt;][\s\S]+\n\n</code></pre>
+const regex = /\n\n[^\s&lt;][\s\S]+\n\n/</code></pre>
             
-            <p>The regex makes sense, but because the first match will end with <span class="tm">\n\n</span>, they won't be included for the next match which means the paragraph won't be detected. The example is simplified, but it conveys the point. The work around is<span id="c06ef"></span> To simply run the regex twice :) Because we don't want to match tags (<span class="tm">[^&lt;]</span>), the first pass will create a paragraph tag <span class="tm">&lt;p&gt;Hello World&lt;/p&gt;</span>, but the second time it will remain unmatched, so that the next paragraph can be detected. It's good it's working properly now.</p>
+            <p>The regex makes sense, but because the first match will end with <span class="tm">\n\n</span>, they won't be included for the next match which means the paragraph won't be detected. The example is simplified, but it conveys the point. The work around is<span id="c06ef"></span></p>
+            
+            <p>To simply run the regex twice :) Because we don't want to match tags (<span class="tm">[^&lt;]</span>), the first pass will create a paragraph tag <span class="tm">&lt;p&gt;Hello World&lt;/p&gt;</span>, but the second time it will remain unmatched, so that the next paragraph can be detected. It's good it's working properly now.</p>
             
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
@@ -162,6 +164,7 @@ const regex = \n\n[^\s&lt;][\s\S]+\n\n</code></pre>
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
                 <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
             </p>
+            </div>
           </div>
         </div>
       </div>
