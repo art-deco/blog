@@ -9,12 +9,14 @@ __initOnThisPage(),__initSidebar()
 import { Component, render, h } from '@externs/preact'
 import { makeIo, init, start } from './__competent-lib'
 import Ellipsis from '../components/ellipsis.jsx'
+import GifVideo from '../components/gif-video.js'
 import GithubBadge from '../components/github-badge.jsx'
 import Highlightjs from 'splendid/build/components/highlightjs'
 import SocialButtons from 'splendid/build/components/social-buttons'
 
 const __components = {
   'ellipsis': Ellipsis,
+  'gif-video': GifVideo,
   'github-badge': GithubBadge,
   'highlightjs': Highlightjs,
   'social-buttons': SocialButtons,
@@ -26,6 +28,13 @@ const io = makeIo()
 const meta = [{
   key: 'ellipsis',
   id: 'c06ef',
+},
+{
+  key: 'gif-video',
+  id: 'c8d0e',
+  props: {
+    src: 'pages/index/img/fire2.mp4',
+  },
 },
 {
   key: 'highlightjs',

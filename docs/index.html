@@ -49,7 +49,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
     <link rel="stylesheet" href="/blog/css/combined.css">
     <link rel="preload" as="style" href="/blog/highlight.js/styles/default.css">
     <style>
-      .no-js [data-io], .no-js [data-loading], .no-js .ImageHolder { display: none!important }
+      .no-js [data-io], .no-js .ImageHolder, .no-js [data-loading] { display: none!important }
     </style>
     <noscript>
       <link rel="stylesheet"
@@ -103,7 +103,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 <div class="a">
                   
                                   <h3 id="on-this-page">On This Page</h3>
-                                  <ul class="OnThisPage"><li data-heading="1-march-sun"><a href="#1-march-sun">1 March Sun</a></li></ul>
+                                  <ul class="OnThisPage"><li data-heading="2-march-mon"><a href="#2-march-mon">2 March Mon</a></li><li data-heading="1-march-sun"><a href="#1-march-sun">1 March Sun</a></li></ul>
                                   <span class="b-xq b-Hk" id="c93ef"><span class="b-Hk" style="height:32px" data-loading>Loading sharing buttons...</span><noscript>Please enable JavaScript to Share</noscript></span>
                                 
                 </div>
@@ -131,6 +131,67 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='15'/%3E" data-io>
                 <noscript><img alt="section break" src="/blog/section-breaks/0.svg"></noscript></a>
             </p>
+            
+            <div data-section id="2-march-mon">
+            <h2>2 March Mon</h2>
+            
+            <p>Working on the content for the website. In the morning, I started answering <em>StackOverflow</em> questions. I think a little bit of time in the morning is good for a warm up, and helping somebody is definitely a way to keep positive as it can really mean a difference to others who can benefit from your experience.</p>
+            
+            <p>Program-wise, I wanted to implement a gif-video component for www.idio.cc, so that a large 400kb can be converted into a movie automatically with ffmpeg, and lazy-loaded. Chrome lazy-loads videos by itself, but other browsers might not do it, so we first load a placeholder, and then a video on top of it when the component is scrolled into view.</p>
+            
+            <p>
+              <div style="position:relative;" id="c8d0e">
+                <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px" alt="fire animation" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1070' height='550'/%3E">
+                <noscript>
+                  <picture>
+                    <source
+                      srcset="pages/index/img/fire-768.webp 768w,pages/index/img/fire-576.webp 576w,pages/index/img/fire-319.webp 319w,pages/index/img/fire-1070.webp 1070w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px"
+                      type="image/webp">
+                    <img class="b-t" onLoad="webploaded(this)" alt="fire animation" src="/blog/pages/index/img/fire-768.jpg" srcset="pages/index/img/fire-768.jpg 768w,pages/index/img/fire-576.jpg 576w,pages/index/img/fire-319.jpg 319w,pages/index/img/fire-1070.jpg 1070w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px">
+                  </picture>
+                </noscript>
+              </div>
+            </p>
+            
+            <p>After doing this, I needed an API from <em>Splendid</em> to extract image width and height, which was implemented by but as a private function before, so I made it available. A few more bugs with paragraphs were fixed. The width of webp images isn't increasing above original width as was happening before, because the "sizes" attribute could include width even larger that the original image. Web components are now published in a separate package because they don't update as often as source code, yet are 500KB in size so each time I republished, it was taking up unnecessary space.</p>
+            
+            <ul>
+              <li><span class="tm">webp</span> = web picture</li>
+              <li><span class="tm">webm</span> = web movie</li>
+            </ul>
+            
+            <p>I've been writing the article about pure hot reload. Went on talking about new "open source" vendor lock since webpack is now COMPULSORY, yet it's made of 350 dependencies which is mind-blowing under normal circumstances, but because of transvalued principle of software, it's absolutely ok and nobody is noticing. So I was a bit negative about it. For some tests, looked up <a href="https://www.azquotes.com/author/38027-Zoroaster">Zoroaster quotes</a>. It brought quite mixed feelings. On the one hand, he's about good thoughts / words/ deeds:</p>
+            
+            <blockquote class="b-r">
+              Turn yourself not away from three best things: Good Thought, Good Word, and Good Deed.
+            </blockquote>
+            
+            <blockquote class="b-r">
+              Always meet petulance with gentleness and perverseness with kindness. A gentle hand can lead even en elephant by a hair. Reply to thine enemy with gentleness.
+            </blockquote>
+            
+            <p>Which is good as it's making you operate from the rational part of the brain, rather than emotional and the one that's fighting for survival (hate, anger).</p>
+            
+            <p>On the other hand,</p>
+            
+            <blockquote class="b-r">
+              War and courage have done more great things than charity. Not your sympathy, but your bravery has saved the unfotunate.
+            </blockquote>
+            <blockquote class="b-r">
+              You shall love peace as a means to new wars - and the short peace more than the long.
+            </blockquote>
+            
+            <p>I feel like those are not by Zoroaster actually, but from Nietzschean Zarathustra 😄 There's a lot of courage and war waging in Nietzsche, which seems to be opposite of peaceful Zoroaster, although I might not know enough about the latter. Still what I'm trying to figure out if it's OK to talk about things I don't like in a way that I want to, or not and I should be more chilled out about it.</p>
+            
+            <p>"When we are in doubt whether an action is good or bad, abstain from it." Zeus's mother taught him not to make enemies but friends instead. Tao is about helping others in a way that in the end they say, "we did it ourselves" and not making anyone upset as it's going to bring imbalance. On the other hand, it's all philology. Real world is rock-solid and if people weren't taking enough responsibility why they're not expecting to be told off? That's where right wing comes in, to be able to ask hard questions and express oneself in a way that is appropriate to the level of feelings that I have if they're justified. Have I taken enough responsibility?</p>
+            
+            <p class="SectionBreak">
+              <a title="Back To Top" href="#top">
+                <img alt="section break"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+            </p>
+            </div>
             
             <div data-section id="1-march-sun">
             <h2>1 March Sun</h2>
@@ -162,7 +223,7 @@ const regex = /\n\n[^\s&lt;][\s\S]+\n\n/</code></pre>
               <a title="Back To Top" href="#top">
                 <img alt="section break"
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+                <noscript><img alt="section break" src="/blog/section-breaks/2.svg"></noscript></a>
             </p>
             </div>
           </div>

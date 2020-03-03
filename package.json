@@ -31,6 +31,7 @@
   "homepage": "https://art-deco.github.io/blog/",
   "devDependencies": {
     "documentary": "^1.37.1",
+    "spawncommand": "^2.2.0",
     "splendid": "^1.17.10",
     "zoroaster": "^4.3.0"
   }

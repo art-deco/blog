@@ -1,0 +1,43 @@
+##! 2 March Mon
+
+Working on the content for the website. In the morning, I started answering StackOverflow questions. I think a little bit of time in the morning is good for a warm up, and helping somebody is definitely a way to keep positive as it can really mean a difference to others who can benefit from your experience.
+
+Program-wise, I wanted to implement a gif-video component for www.idio.cc, so that a large 400kb can be converted into a movie automatically with ffmpeg, and lazy-loaded. Chrome lazy-loads videos by itself, but other browsers might not do it, so we first load a placeholder, and then a video on top of it when the component is scrolled into view.
+
+<p>
+  <gif-video placeholder="./img/fire.jpg" webp="photo" img-fluid src="./img/fire2.gif" alt="fire animation" />
+</p>
+
+After doing this, I needed an API from Splendid to extract image width and height, which was implemented by but as a private function before, so I made it available. A few more bugs with paragraphs were fixed. The width of webp images isn't increasing above original width as was happening before, because the "sizes" attribute could include width even larger that the original image. Web components are now published in a separate package because they don't update as often as source code, yet are 500KB in size so each time I republished, it was taking up unnecessary space.
+
+<ul>
+  - `webp` = web picture
+  - `webm` = web movie
+</ul>
+
+I've been writing the article about pure hot reload. Went on talking about new "open source" vendor lock since webpack is now COMPULSORY, yet it's made of 350 dependencies which is mind-blowing under normal circumstances, but because of transvalued principle of software, it's absolutely ok and nobody is noticing. So I was a bit negative about it. For some tests, looked up [Zoroaster quotes](https://www.azquotes.com/author/38027-Zoroaster). It brought quite mixed feelings. On the one hand, he's about good thoughts / words/ deeds:
+
+<block-quote>
+  Turn yourself not away from three best things: Good Thought, Good Word, and Good Deed.
+</block-quote>
+
+<block-quote>
+  Always meet petulance with gentleness and perverseness with kindness. A gentle hand can lead even en elephant by a hair. Reply to thine enemy with gentleness.
+</block-quote>
+
+Which is good as it's making you operate from the rational part of the brain, rather than emotional and the one that's fighting for survival (hate, anger).
+
+On the other hand,
+
+<block-quote>
+  War and courage have done more great things than charity. Not your sympathy, but your bravery has saved the unfotunate.
+</block-quote>
+<block-quote>
+  You shall love peace as a means to new wars - and the short peace more than the long.
+</block-quote>
+
+I feel like those are not by Zoroaster actually, but from Nietzschean Zarathustra 😄 There's a lot of courage and war waging in Nietzsche, which seems to be opposite of peaceful Zoroaster, although I might not know enough about the latter. Still what I'm trying to figure out if it's OK to talk about things I don't like in a way that I want to, or not and I should be more chilled out about it.
+
+"When we are in doubt whether an action is good or bad, abstain from it." Zeus's mother taught him not to make enemies but friends instead. Tao is about helping others in a way that in the end they say, "we did it ourselves" and not making anyone upset as it's going to bring imbalance. On the other hand, it's all philology. Real world is rock-solid and if people weren't taking enough responsibility why they're not expecting to be told off? That's where right wing comes in, to be able to ask hard questions and express oneself in a way that is appropriate to the level of feelings that I have if they're justified. Have I taken enough responsibility?
+
+<section-break />
