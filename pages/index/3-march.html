@@ -1,0 +1,63 @@
+##! 3 March Tue
+
+When will I ever wake up happy? Although I'm accepting it as reality of life to wake up with really heavy head, stressed out and thinking about all the same thing. I don't almost identify myself with it, it's because of stress hormones due to hunger and also it's because the thoughts and consciousness are so contrasted to the blissful happy sleep.
+
+Been working on the article the whole day. As I was saying yesterday, getting annoyed with stuff was just a way to express emotions it's not really that necessary in an informational post. When you're in that state you feel like it's important to say those words but people reading it won't necessarily be in the same frame of mind and because there's no usefulness of information and only some rambling, although meaningful, it can set readers against you.
+
+I realised that when I actually installed Webpack and it took about a minute to install, which wasn't that bad. I was portraying it as complete insanity but I always had quite warm feelings towards Webpack as I used it at work and it helped to build software. So I calmed down and started taking aggressive stuff out. One interesting thing is that I picked up that EMPHASISING points in capital letters from Kazchinski and the majority of times it was these things: you can expect RESPECT and feel like VALUED user, _etc_. Most of that had to go, but I left a few points about being a user vs being a developer, although gave praise to Webpack also, because it did solve the bundling problem.
+
+Created an animation for the article also and some graphics regarding scientific approach in programming. What I realise, it's not hard to actually be polite and respectful towards other people and there's no problem with that, I'm not an idiot. It's when certain others behave like total children yet they have no feedback as to their own behaviour and think they're correct while being extremely arrogant &mdash; this is the most annoying thing. But a responsible man can handle that?
+
+<p>
+  <img webp="drawing" img-fluid src="./img/frontend.png" alt="front end" />
+</p>
+
+As usual, when not knowing how to do animation, a bit of anxiety and leaving the workplace for food/tea _etc_. But in the end, you're just, let's get on with it, and draw a line. I know I want it the prettiest very well designed line in the world, but let's just press `N` and draw the line / a circle. I wish I could draw properly, but we have to work with what there is.
+
+By the end of the day (or night, or start of the new day as it was 8 am), I was testing frontend middleware on photo-uploader, and it didn't work as I didn't write code in _Idio_ to hook up the hot reload config properly. Also when overriding methods of the class's prototype, if it's a getter, it will actually be called:
+
+```js
+class A {
+  get test() {
+    console.log('hello')
+    return 'test'
+  }
+}
+A.prototype['test'] // -> this calls getter and
+                    // produces side effects
+                    // such as console logging
+```
+
+Instead, I'll have to use `getOwnPropertyDescriptor` for updating prototypes. Moreover, I realised I have to not only update those methods that changed, but ALL methods of the prototype, because the code in the file might have changed that is referenced by the method, therefore even if its code didn't change, it might be calling a function that was updated.
+
+```js
+class A {
+  test() {
+    return example('test')
+  }
+}
+
+// this can change so the whole of prototype must change
+// on updates, since we don't know which method used it
+const example = (s) => {
+  return s + '!'
+}
+```
+
+Stack overflow is addictive AF. They're worse than facebook because you're generating quite a bit of interaction and you always want to go back to check responses / whether your answers were accepted. I don't like that it's triggering the part of the brain that's compulsive. Plus their badges... Visit on 600 consecutive days, keep getting 200 rep, etc. It's really annoying.
+
+Finally, when experimenting with hot-reload in React, I had to install it and try updates. It was good to understand how their, and Webpack's reload works in details. This type of information is much more useful for a blog post instead of talking about how we're all hostage to their technology. Abramov's reload does have disadvantages: when stepping into a method, you have to click multiple times to go through proxy. Same with Webpack's modules, you have to click "step in" thrice to end up in the function that you want. Therefore my reload is even better than these heavy solutions.
+
+Also a bound function won't be updated in React-hot-reload, since it was bound in the prototype, so we're equal here. One way to fix this, is to override the constructor method of a class which will only be called once, and apply a proxy to any function that is being bound. This should only need to be done for bound functions as all other times we can simply override the prototype.
+
+*TODO*
+
+<ul>
+  - Parse stuff like `class A; export default A` for hot reload as it's used quite often.
+  - Hot reload bound functions (experimental).
+  - Update _Splendid_ to parse list blocks (to avoid writing `<ul></ul>` every time).
+  - Move animation component to _Splendid_.
+  - Check what happens when a method is added to a class &mdash; will it be available to the proxy in ``react-hot-loader``?
+</ul>
+
+<section-break />

@@ -45,7 +45,7 @@ const meta = [{
 },
 {
   key: 'highlightjs',
-  id: 'ccdbf',
+  id: 'ccdbf,ccdbf1,ccdbf2',
   props: {
     lang: 'javascript',
   },
