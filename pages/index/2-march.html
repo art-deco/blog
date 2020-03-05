@@ -10,10 +10,8 @@ Program-wise, I wanted to implement a gif-video component for www.idio.cc, so th
 
 After doing this, I needed an API from Splendid to extract image width and height, which was implemented by but as a private function before, so I made it available. A few more bugs with paragraphs were fixed. The width of webp images isn't increasing above original width as was happening before, because the "sizes" attribute could include width even larger that the original image. Web components are now published in a separate package because they don't update as often as source code, yet are 500KB in size so each time I republished, it was taking up unnecessary space.
 
-<ul>
-  - `webp` = web picture
-  - `webm` = web movie
-</ul>
+- `webp` = web picture
+- `webm` = web movie
 
 I've been writing the article about pure hot reload. Went on talking about new "open source" vendor lock since webpack is now COMPULSORY, yet it's made of 350 dependencies which is mind-blowing under normal circumstances, but because of transvalued principle of software, it's absolutely ok and nobody is noticing. So I was a bit negative about it. For some tests, looked up [Zoroaster quotes](https://www.azquotes.com/author/38027-Zoroaster). It brought quite mixed feelings. On the one hand, he's about good thoughts / words/ deeds:
 

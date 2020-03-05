@@ -77,7 +77,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 
                 <a
                   title="Static Web Site Compiler That Uses Closure Compiler For JS Bundling And Closure Stylesheets For CSS optimisations. Supports JSX Syntax To Write Static Elements And Dynamic Preact Components." class="NPMBadge" href="https://www.npmjs.com/package/splendid">
-                  <span class="a"><em>Splendid</em></span><span class="b">1.17.10</span></a>
+                  <span class="a"><em>Splendid</em></span><span class="b">1.18.0</span></a>
               </div>
               <h3 id="pages-2020">Pages 2020</h3>
               <ul><li class><a data-file="index" href="/blog/">March</a></li><li class="Active"><a data-file="feb" href="/blog/february.html">February</a></li></ul>
@@ -451,10 +451,12 @@ output.promise // =&gt; My girl, Where did you sleep last night</code></pre>
             
             <h3 id="todo">TODO</h3>
             
-            <li><span class="tm">normaliseOutputs</span> to fully replace all newlines, as currently the regex is <span class="tm">[^\r]\n</span> -> EOL but this doesn't work for 2 consecutive new lines like <span class="tm">\r\n\n</span>.</li>
-            <li>Update <span class="tm2">temp-context</span> to create cross-platform snapshots, as the paths are written using a system separator which is annoying and requires to update paths manually.</li>
-            <li>Handle <span class="tm">\n</span> without <span class="tm">\r</span> on Windows for mask results extraction.</li>
-            <li>Fix <em>Documentary</em> and <em>Depack</em> for FPJ on Windows.</li>
+            <ul>
+              <li><span class="tm">normaliseOutputs</span> to fully replace all newlines, as currently the regex is <span class="tm">[^\r]\n</span> -> EOL but this doesn't work for 2 consecutive new lines like <span class="tm">\r\n\n</span>.</li>
+              <li>Update <span class="tm2">temp-context</span> to create cross-platform snapshots, as the paths are written using a system separator which is annoying and requires to update paths manually.</li>
+              <li>Handle <span class="tm">\n</span> without <span class="tm">\r</span> on Windows for mask results extraction.</li>
+              <li>Fix <em>Documentary</em> and <em>Depack</em> for FPJ on Windows.</li>
+            </ul>
             
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">

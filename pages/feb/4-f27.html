@@ -25,11 +25,9 @@ After Idio, went back to photo uploader. I already wrote some code a few years a
 
 The front-end app is using Bootstrap, so some classes are set as `btn btn-sm`, for example, and additionally I followed the naming convention for capital letters in class names from CSS rules, e.g., `ImageInfo`. Therefore, I wanted to implement my old idea to integrate property names to class conversion in the transpiler. The main package that does JSX transpilation is `@idio/jsx`, which is then used by:
 
-<ul>
-  - _FrontEnd_, for live serving of JSX files from the server: DEVELOPMENT.
-  - _Depack_, when transpiling JSX prior to a build: PRODUCTION.
-  - _ÀLaMode_, during server-side rendering, and when building components for publishing: DISTRIBUTION.
-</ul>
+- _FrontEnd_, for live serving of JSX files from the server: DEVELOPMENT.
+- _Depack_, when transpiling JSX prior to a build: PRODUCTION.
+- _ÀLaMode_, during server-side rendering, and when building components for publishing: DISTRIBUTION.
 
 _JSX_ is massive, and is used in every area of web development. I linked frontend and updated class names in the photo-uploader:
 
@@ -103,10 +101,8 @@ After front-end is updated, what is left now, is to be able to build with ÀLaMo
 
 *TODO*
 
-<ul>
-  - come up with a strategy for automated edge testing that could populate a lot of values, i.e. specify a range to test the function against. there's a term for that.
-  - provide JSX namespace for HTMLAttributes that contains bootstrap utilities.
-  - write a guest post for dotsucks: open source sucks.
-</ul>
+- come up with a strategy for automated edge testing that could populate a lot of values, i.e. specify a range to test the function against. there's a term for that.
+- provide JSX namespace for HTMLAttributes that contains bootstrap utilities.
+- write a guest post for dotsucks: open source sucks.
 
 <section-break />
