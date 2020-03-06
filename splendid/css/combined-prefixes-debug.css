@@ -7,6 +7,9 @@
 *::after {
   -webkit-box-sizing: border-box;
 }
+hr {
+  -webkit-box-sizing: content-box;
+}
 .row {
   display: -webkit-box;
   display: -moz-box;
@@ -36,6 +39,18 @@
     -webkit-box-flex: 0 0 50%;
     -moz-box-flex: 0 0 50%;
     -webkit-flex: 0 0 50%;
+  }
+}
+.badge {
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  -webkit-transition: color .15s ease-in-out , background-color .15s ease-in-out , border-color .15s ease-in-out , box-shadow .15s ease-in-out;
+  -o-transition: color .15s ease-in-out , background-color .15s ease-in-out , border-color .15s ease-in-out , box-shadow .15s ease-in-out;
+}
+@media (prefers-reduced-motion:reduce) {
+  .badge {
+    -webkit-transition: none;
+    -o-transition: none;
   }
 }
 .rounded {

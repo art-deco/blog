@@ -39,7 +39,7 @@
       (function(){var b=/url\('([\s\S]+?)'\)/.exec(document.head.querySelector("#cpt").textContent);if(b){var a=document.createElement("link");a.rel="preload";a.as="font";a.href=b[1];document.head.appendChild(a)}})()
     </script>
     <script>(function(h,r){var a=Object.keys(h),c=!0;"CSS"in window&&"supports"in CSS?(a=a.reduce(function(k,b){var l=h[b];b=b.split("|");for(var m=!1,d={},f=0;f<b.length;d={a:d.a},f++)if(d.a=b[f],l.map(function(n){return function(e){e=e.split("|");for(var p=!1,g=0;g<e.length;g++){var q=e[g];if(CSS.supports(n.a,q)){p=!0;break}else k.push(n.a+": "+q)}return p}}(d)).filter(Boolean).length==l.length){m=!0;break}m||(c=!1);return k},[]),a.length?c&&console.log("\ud83d\udcbf Browser does not support CSS properties: %s",
-a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser supports all modern CSS properties.")):(c=!1,console.log("\ud83d\udce0 Browser does not support CSS checks."));c||(a=document.createElement("link"),a.rel="stylesheet",a.href=r,document.head.appendChild(a))})({"border-radius":["2px"],"box-shadow":["none"],"flex|-ms-flex":["0 0 25%"],"display":["flex|-ms-flexbox"],"hyphens|-webkit-hyphens|-ms-hyphens":["auto"],"flex-shrink|-ms-flex-negative":["0"],"position":["sticky|-webkit-sticky"],"flex-wrap|-ms-flex-wrap":["wrap"],"box-sizing":["border-box"],"flex-direction|-ms-flex-direction":["column"]}, '/blog/css/combined-prefixes.css')</script>
+a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser supports all modern CSS properties.")):(c=!1,console.log("\ud83d\udce0 Browser does not support CSS checks."));c||(a=document.createElement("link"),a.rel="stylesheet",a.href=r,document.head.appendChild(a))})({"border-radius":["2px"],"box-shadow":["none"],"flex|-ms-flex":["0 0 25%"],"display":["flex|-ms-flexbox"],"hyphens|-webkit-hyphens|-ms-hyphens":["auto"],"flex-shrink|-ms-flex-negative":["0"],"position":["sticky|-webkit-sticky"],"flex-wrap|-ms-flex-wrap":["wrap"],"box-sizing":["border-box"],"flex-direction|-ms-flex-direction":["column"],"transition":["none"]}, '/blog/css/combined-prefixes.css')</script>
     <script>
       (function(q,k){function x(a){for(var f=/url\((.+?)\).*?;\s+unicode-range: (.+?);/g,b={},d=[],h;h=f.exec(a);){var r=h[2];d.push({url:h[1],a:r});b[r]=1}b=Object.keys(b).reduce(function(c,e){var g=e.split(/,\s/).map(function(l){return l.replace("U+","\\u").replace("-","-\\u")}).join("").toLowerCase();c[e]=new RegExp("["+g+"]");return c},{});var t=document.body?document.body.textContent:"",y=t?Object.keys(b).reduce(function(c,e){b[e].test(t)&&(c[e]=!0);return c},{}):Object.keys(b).reduce(function(c,
       e){e in k&&(c[e]=!0);return c},{});m=d.filter(function(c){return c.a in y}).map(function(c){return c.url});if(!m.length)return u();var v=document.createDocumentFragment();m.forEach(function(c,e){var g=document.createElement("link");g.href=c;g.rel="preload";g.as="font";var l=e+1;;g.onload=function(){return u(l)};g.setAttribute("crossorigin",!0);v.appendChild(g)});document.head.appendChild(v)}k=void 0===k?{}:k;var n=document.createElement("link");if(function(a,
@@ -95,7 +95,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 
                 <a
                   title="Static Web Site Compiler That Uses Closure Compiler For JS Bundling And Closure Stylesheets For CSS optimisations. Supports JSX Syntax To Write Static Elements And Dynamic Preact Components." class="NPMBadge" href="https://www.npmjs.com/package/splendid">
-                  <span class="a"><em>Splendid</em></span><span class="b">1.18.0</span></a>
+                  <span class="a"><em>Splendid</em></span><span class="b">1.18.1</span></a>
               </div>
               <h3 id="pages-2020">Pages 2020</h3>
               <ul><li class="Active"><a data-file="index" href="/blog/">March</a></li><li class><a data-file="feb" href="/blog/february.html">February</a></li></ul>
@@ -103,7 +103,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 <div class="a">
                   
                                   <h3 id="on-this-page">On This Page</h3>
-                                  <ul class="OnThisPage"><li data-heading="4-march-wed"><a href="#4-march-wed">4 March Wed</a></li><li data-heading="3-march-tue"><a href="#3-march-tue">3 March Tue</a></li><li data-heading="2-march-mon"><a href="#2-march-mon">2 March Mon</a></li><li data-heading="1-march-sun"><a href="#1-march-sun">1 March Sun</a></li></ul>
+                                  <ul class="OnThisPage"><li data-heading="6-march-fri"><a href="#6-march-fri">6 March Fri</a></li><li data-heading="5-march-thu"><a href="#5-march-thu">5 March Thu</a></li><li data-heading="4-march-wed"><a href="#4-march-wed">4 March Wed</a></li><li data-heading="3-march-tue"><a href="#3-march-tue">3 March Tue</a></li><li data-heading="2-march-mon"><a href="#2-march-mon">2 March Mon</a></li><li data-heading="1-march-sun"><a href="#1-march-sun">1 March Sun</a></li></ul>
                                   <span class="b-xq b-Hk" id="c93ef"><span class="b-Hk" style="height:32px" data-loading>Loading sharing buttons...</span><noscript>Please enable JavaScript to Share</noscript></span>
                                 
                 </div>
@@ -132,6 +132,122 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 <noscript><img alt="section break" src="/blog/section-breaks/0.svg"></noscript></a>
             </p>
             
+            <div data-section id="6-march-fri">
+            <h2>6 March Fri</h2>
+            
+            <p>Slept long even though I went to bed at 3am, only woke up by 3.30 as well because of sleep debt from yesterday. I wanted to get access to the logs from ElasticSearch, but via Kibana, so the question was, how to setup <em>Kibana</em>. I used to have an older image with stripped dependencies, but for version 6, so I started working on updating to version 7, using the same method with <span class="tm">install-deps</span> that tries to start the server and listens for errors.</p>
+            
+            <p class="SectionBreak">
+              <a title="Back To Top" href="#top">
+                <img alt="section break"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+            </p>
+            </div>
+            
+            
+            <div data-section id="5-march-thu">
+            <h2>5 March Thu</h2>
+            
+            <p>So I woke up at 6 am today, and then slept at 5pm until 7.30pm. In the morning I was rereading the idio article about hot reload, and thought about the links shortener for the website, so that I can track clicks. <a href="https://artdeco.tech/alibaba">Alibaba</a> gives a <span class="b-Oh b-Xh">.tech</span> domain for 1 year for free, so I used that opportunity to register artdeco.tech. It was perfect for setting up the link system.</p>
+            
+            <p>To deploy this app, I also needed to update the idio template on MNP, because last time I copied some improvements across, the template stopped working because the API usage was incorrect. I addressed this issue and update the Dokku question, which was only adding a remote git host for deployments to dokku. But I wanted to make more possible, such as creating an app automatically, calling <span class="tm">letsencrypt</span> on it, and connecting a database to it (this one in future).</p>
+            
+            <p>The problem is that when you try to establish an ssh connection to a new host for the fist time, SSH client will actually ask for confirmation to add to the list of known hosts:</p>
+            
+            <pre id="c724c"><code class="shell hljs">The authenticity of host 'akashic.page (8.108.77.44)' can't be established.
+ECDSA key fingerprint is SHA256:FGxDgulqxG8ReCdMguJRUvSn2M2OaBdYg7+B0+8VU8Q.
+Are you sure you want to continue connecting (yes/no)?</code></pre>
+            
+            <p>I tried to use my <span class="tm">forkfeed</span> package to automatically pass YES to this question but it wasn't working. Having spent about 30+ minutes on this, and thinking that I've found a bug in Node.JS when forks' options are being ignored when a CWD is passed, it actually turned out that the SSH client is writing directly to the terminal:</p>
+            
+            <blockquote class="b-r">
+              ssh opens the controlling terminal directly via /dev/tty and that's where it's writing that message.
+              <a href="https://unix.stackexchange.com/a/132227/94298">unix.stackexchange.com</a>
+            </blockquote>
+            
+            <p>That's why the message wasn't written by the fork itself, but by the terminal, so I couldn't feed the yes answer to it. That means that users have to manually type in yes which is OK. It just was very confusing as to why the fork wasn't writing the message I saw in the terminal.</p>
+            
+            <p>I then also added logarithm middleware to <em>Idio</em> server, since it was present in the idio template via middleware constructor, so I wanted it to be part of the server, for quick access. During the documentation stage, I gave an example of how an error would be logged, and... it wasn't actually logged as an error. My assumption when writing src for logarithm was that Koa will catch an error and set the response status automatically but it doesn't do it. Instead, it waits for ALL middleware to execute, including logarithm, and only then catches errors and calls <span class="tm">ctx.onerror</span> which sets the status code. Therefore, any faulty requests weren't actually logged properly with their status code, but with 200 instead. Moreover, the request method wasn't logged. So I fixed those problems and merged the middleware into <em>Idio</em>.</p>
+            
+            <p>When I felt tired I read <a href="https://www.alexandertechnique.com/at">Alexander</a> who's one of the coolest people ever lived, Constructive Conscious Control. It's about how people subconsciously learn to do something wrong and then repeat it for the rest of their lives. Yet when shown how to do things correctly, they perceive it as wrong and can't adjust. Through not doing first and listening to the instructions of the teacher instead, who then adjusts their posture/position manually, they can gradually unlearn their incorrect sensory appreciation and learn again.</p>
+            
+            <p>I keep opening the book on random pages and rereading chapters at random. This time it was a good one, about complexities of civilised life:</p>
+            
+            <blockquote class="b-r">
+              "Life is too complex" &mdash; what they fail to recognise is that this condition is the result of their own, or others' ill-considered, end-gaining attempts to surmount the difficulties encountered during the progress of civilisation.
+            </blockquote>
+            
+            <p>This is all too applicable for the state of JS programming. The tools have become so complex through the evolution of the language in the last 5 years, and people seek to gain the ends of adhering to standards and inventing new ones, that when they see something simple, they're going to reject it subconsciously as they're so used to complexity.</p>
+            
+            <hr />
+            
+            <p>After waking up, I went on youtube and typed something for search, and this video came up:</p>
+            
+            <p>
+              <a href="https://www.youtube.com/watch?v=Rk7NmhYfPN4">
+                <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px" alt="How Do I Know Consciousness is Universal, Infinite and Unlimited?" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1079' height='695'/%3E">
+                <noscript>
+                  <picture>
+                    <source
+                      srcset="pages/index/img/unconsciousness-768.webp 768w,pages/index/img/unconsciousness-576.webp 576w,pages/index/img/unconsciousness-319.webp 319w,pages/index/img/unconsciousness-1079.webp 1079w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px"
+                      type="image/webp">
+                    <img class="b-t" onLoad="webploaded(this)" alt="How Do I Know Consciousness is Universal, Infinite and Unlimited?" src="/blog/pages/index/img/unconsciousness-768.png" srcset="pages/index/img/unconsciousness-768.png 768w,pages/index/img/unconsciousness-576.png 576w,pages/index/img/unconsciousness-319.png 319w,pages/index/img/unconsciousness-1079.png 1079w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px">
+                  </picture>
+                </noscript></a>
+            </p>
+            
+            <p>The thing that is being said is that why we're so sure about the materialistic nature of the world, and then we've been conditioned to ignore consciousness. The whole universe is permeated with consciousness that is aware of our experience yet we never think about it or question its nature. The most interesting question, is what is it that thinks and is aware of our thoughts, it's impossible to answer but if we start asking, we can start discovering something beyond our daily conditioning.</p>
+            
+            <p>His theory is basically reverse-reality hypothesis, that we don't perceive the single world, but there are many different private worlds for each individual, yet what we share is consciousness that is the one underlying everything. The reality is projected onto our sensual and mind experiences as a hologram and we think that we see objects yet objects are just expressions of the <em>_</em><em>_</em> (what, something that can't be spoken of for the lack of words?).</p>
+            
+            <p>It had really soothing effect just to know that something is aware of my experiences. It's very nice and calming, just to get outside that materialistic box for a second and connect with the source. Need to stop thinking and listen for a second. It's true it's aware and if stop with thoughts it gives us clues. It's aligned with McKenna and all that better world beyond our habitual thinking. It's good to reverse polarity and made me relax as I found something I liked and related to. I like how he put it that something is aware of our experience.</p>
+            
+            <p>
+              <a href="https://www.youtube.com/watch?v=9D8Itol9Zzs">
+                <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px" alt="Abraham Hicks - How To Practice Good-Feeling Thoughts All The Time (2016)" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1084' height='697'/%3E">
+                <noscript>
+                  <picture>
+                    <source
+                      srcset="pages/index/img/hicks-768.webp 768w,pages/index/img/hicks-576.webp 576w,pages/index/img/hicks-319.webp 319w,pages/index/img/hicks-1084.webp 1084w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px"
+                      type="image/webp">
+                    <img class="b-t" onLoad="webploaded(this)" alt="Abraham Hicks - How To Practice Good-Feeling Thoughts All The Time (2016)" src="/blog/pages/index/img/hicks-768.png" srcset="pages/index/img/hicks-768.png 768w,pages/index/img/hicks-576.png 576w,pages/index/img/hicks-319.png 319w,pages/index/img/hicks-1084.png 1084w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px">
+                  </picture>
+                </noscript></a>
+            </p>
+            
+            <p>The next one was this amazing woman, so energetic and positive.</p>
+            
+            <blockquote class="b-r">
+              You've gotta learn vibration. you must get conscious control and awareness of what you're vibrational broadcasting because that's equals your life. a lot of pessimists are accurately predicting outcome. a lot of pessimists are accurately predicting outcome. your thoughts matter.
+            </blockquote>
+            
+            <p>It's pure therapy, about focusing on good thoughts. With trauma we get focused on the problem and think that, but her method is to actively think good things. We will always be thinking it's no point to be like "i'm not going to think", just do positive thinking. With mediation, we can just tell our bodies, like to an animal, "stay put", to avoid the habitual negative thinking. "I can practice optimism until it becomes the way of life." Take your attention from problems and they will cease to exist.</p>
+            
+            <p>
+              <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px" alt="I must be cruel, only to be kind." src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='720'/%3E">
+              <noscript>
+                <picture>
+                  <source
+                    srcset="pages/index/img/shakespear-1140.webp 1140w,pages/index/img/shakespear-768.webp 768w,pages/index/img/shakespear-576.webp 576w,pages/index/img/shakespear-319.webp 319w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px"
+                    type="image/webp">
+                  <img class="b-t" onLoad="webploaded(this)" alt="I must be cruel, only to be kind." src="/blog/pages/index/img/shakespear-1140.jpg" srcset="pages/index/img/shakespear-1140.jpg 1140w,pages/index/img/shakespear-768.jpg 768w,pages/index/img/shakespear-576.jpg 576w,pages/index/img/shakespear-319.jpg 319w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px">
+                </picture>
+              </noscript>
+            </p>
+            
+            <p>Both of this things really relaxed me and made me feel less stressed. It's how I want to feel always but what can I do when a real criminal has ruined my life? There's this hypothetical "positive attraction" mode, and there's reality when psychopaths ruin you (am i complaining? yeah yeah). If I wasn't doing all the work that I'm doing, there would be nothing that could save me, so positive thinking is a good addition and mental gymnastics to achieving success, but there must be hard work behind it.</p>
+            
+            <p>After that, worked on MNP to update the API with <span class="tm">removeBlocks</span> and <span class="tm">keepBlocks</span> functions. Also published types for the API so that they can be used in the configuration file and tested it against the package. Created a Preact UI for artdeco.tech to add new links with redirect.</p>
+            
+            <p class="SectionBreak">
+              <a title="Back To Top" href="#top">
+                <img alt="section break"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/2.svg"></noscript></a>
+            </p>
+            </div>
+            
             <div data-section id="4-march-wed">
             <h2>4 March Wed</h2>
             
@@ -148,8 +264,8 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/3.svg"></noscript></a>
             </p>
             </div>
             
@@ -179,7 +295,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
             
             <p>By the end of the day (or night, or start of the new day as it was 8 am), I was testing frontend middleware on photo-uploader, and it didn't work as I didn't write code in <em>Idio</em> to hook up the hot reload config properly. Also when overriding methods of the class's prototype, if it's a getter, it will actually be called:</p>
             
-            <pre id="ccdbf2"><code class="javascript hljs">class A {
+            <pre id="ccdbf"><code class="javascript hljs">class A {
   get test() {
     console.log('hello')
     return 'test'
@@ -191,7 +307,7 @@ A.prototype['test'] // -&gt; this calls getter and
             
             <p>Instead, I'll have to use <span class="tm">getOwnPropertyDescriptor</span> for updating prototypes. Moreover, I realised I have to not only update those methods that changed, but ALL methods of the prototype, because the code in the file might have changed that is referenced by the method, therefore even if its code didn't change, it might be calling a function that was updated.</p>
             
-            <pre id="ccdbf"><code class="javascript hljs">class A {
+            <pre id="ccdbf1"><code class="javascript hljs">class A {
   test() {
     return example('test')
   }
@@ -222,8 +338,8 @@ const example = (s) =&gt; {
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/2.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/4.svg"></noscript></a>
             </p>
             </div>
             
@@ -283,8 +399,8 @@ const example = (s) =&gt; {
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/3.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='10'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/5.svg"></noscript></a>
             </p>
             </div>
             
@@ -307,7 +423,7 @@ Paragraph 2: Foo Bar
 
 -- end</code></pre>
             
-            <pre id="ccdbf1"><code class="javascript hljs">// regex to match this:
+            <pre id="ccdbf2"><code class="javascript hljs">// regex to match this:
 const regex = /\n\n[^\s&lt;][\s\S]+\n\n/</code></pre>
             
             <p>The regex makes sense, but because the first match will end with <span class="tm">\n\n</span>, they won't be included for the next match which means the paragraph won't be detected. The example is simplified, but it conveys the point. The work around is<span id="c06ef"></span></p>
@@ -317,8 +433,8 @@ const regex = /\n\n[^\s&lt;][\s\S]+\n\n/</code></pre>
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/4.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='10'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/6.svg"></noscript></a>
             </p>
             </div>
           </div>

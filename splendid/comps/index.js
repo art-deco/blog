@@ -26,6 +26,13 @@ const io = makeIo()
 
 /** @type {!Array<!preact.PreactProps>} */
 const meta = [{
+  key: 'highlightjs',
+  id: 'c724c',
+  props: {
+    lang: 'shell',
+  },
+},
+{
   key: 'ellipsis',
   id: 'c06ef',
 },

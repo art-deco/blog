@@ -58,6 +58,11 @@ body {
   text-align: left;
   background-color: #fff;
 }
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
 h1, h2, h3 {
   margin-top: 0;
 }
@@ -109,6 +114,12 @@ h2 {
 }
 h3 {
   font-size: 1.75rem;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
 }
 .blockquote {
   margin-bottom: 1rem;
@@ -198,6 +209,30 @@ pre code {
     max-width: 50%;
   }
 }
+.badge {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out , background-color .15s ease-in-out , border-color .15s ease-in-out , box-shadow .15s ease-in-out;
+}
+@media (prefers-reduced-motion:reduce) {
+  .badge {
+    transition: none;
+  }
+}
+.badge:empty {
+  display: none;
+}
+.badge-dark {
+  color: #fff;
+  background-color: #343a40;
+}
 .rounded {
   border-radius: .25rem !important;
 }
@@ -282,6 +317,9 @@ pre code {
   }
   body, .container {
     min-width: 992px !important;
+  }
+  .badge {
+    border: 1px solid #000;
   }
 }
 .SectionBreak {
