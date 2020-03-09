@@ -233,6 +233,9 @@ pre code {
   color: #fff;
   background-color: #343a40;
 }
+.border {
+  border: 1px solid #dee2e6 !important;
+}
 .rounded {
   border-radius: .25rem !important;
 }

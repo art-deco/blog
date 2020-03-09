@@ -64,7 +64,7 @@
   vertical-align: baseline;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;}@media (prefers-reduced-motion: reduce){.badge{transition: none;}}.badge:empty{display: none;}.badge-dark{color: #fff;
-  background-color: #343a40;}.rounded{border-radius: 0.25rem !important;}.d-inline-block{display: inline-block !important;}.d-block{display: block !important;}.d-flex{display: -ms-flexbox !important;
+  background-color: #343a40;}.border{border: 1px solid #dee2e6 !important;}.rounded{border-radius: 0.25rem !important;}.d-inline-block{display: inline-block !important;}.d-block{display: block !important;}.d-flex{display: -ms-flexbox !important;
   display: flex !important;}.flex-column{-ms-flex-direction: column !important;
   flex-direction: column !important;}.flex-shrink-0{-ms-flex-negative: 0 !important;
   flex-shrink: 0 !important;}@supports ((position: -webkit-sticky) or (position: sticky)){.sticky-top{position: -webkit-sticky;
