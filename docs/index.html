@@ -39,7 +39,7 @@
       (function(){var b=/url\('([\s\S]+?)'\)/.exec(document.head.querySelector("#cpt").textContent);if(b){var a=document.createElement("link");a.rel="preload";a.as="font";a.href=b[1];document.head.appendChild(a)}})()
     </script>
     <script>(function(h,r){var a=Object.keys(h),c=!0;"CSS"in window&&"supports"in CSS?(a=a.reduce(function(k,b){var l=h[b];b=b.split("|");for(var m=!1,d={},f=0;f<b.length;d={a:d.a},f++)if(d.a=b[f],l.map(function(n){return function(e){e=e.split("|");for(var p=!1,g=0;g<e.length;g++){var q=e[g];if(CSS.supports(n.a,q)){p=!0;break}else k.push(n.a+": "+q)}return p}}(d)).filter(Boolean).length==l.length){m=!0;break}m||(c=!1);return k},[]),a.length?c&&console.log("\ud83d\udcbf Browser does not support CSS properties: %s",
-a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser supports all modern CSS properties.")):(c=!1,console.log("\ud83d\udce0 Browser does not support CSS checks."));c||(a=document.createElement("link"),a.rel="stylesheet",a.href=r,document.head.appendChild(a))})({"border-radius":["2px"],"box-shadow":["none"],"flex|-ms-flex":["0 0 25%"],"display":["flex|-ms-flexbox"],"hyphens|-webkit-hyphens|-ms-hyphens":["auto"],"flex-shrink|-ms-flex-negative":["0"],"position":["sticky|-webkit-sticky"],"flex-wrap|-ms-flex-wrap":["wrap"],"box-sizing":["border-box"],"flex-direction|-ms-flex-direction":["column"],"transition":["none"]}, '/blog/css/combined-prefixes.css')</script>
+a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser supports all modern CSS properties.")):(c=!1,console.log("\ud83d\udce0 Browser does not support CSS checks."));c||(a=document.createElement("link"),a.rel="stylesheet",a.href=r,document.head.appendChild(a))})({"flex-grow|-ms-flex-positive":["1"],"flex|-ms-flex":["0 0 25%"],"display":["flex|-ms-flexbox"],"box-sizing":["border-box"],"transition":["none"],"flex-direction|-ms-flex-direction":["column"],"border-radius":["2px"],"box-shadow":["none"],"flex-basis|-ms-flex-preferred-size":["0"],"hyphens|-webkit-hyphens|-ms-hyphens":["auto"],"flex-wrap|-ms-flex-wrap":["wrap"],"flex-shrink|-ms-flex-negative":["0"],"position":["sticky|-webkit-sticky"],"align-items":["center"]}, '/blog/css/combined-prefixes.css')</script>
     <script>
       (function(q,k){function x(a){for(var f=/url\((.+?)\).*?;\s+unicode-range: (.+?);/g,b={},d=[],h;h=f.exec(a);){var r=h[2];d.push({url:h[1],a:r});b[r]=1}b=Object.keys(b).reduce(function(c,e){var g=e.split(/,\s/).map(function(l){return l.replace("U+","\\u").replace("-","-\\u")}).join("").toLowerCase();c[e]=new RegExp("["+g+"]");return c},{});var t=document.body?document.body.textContent:"",y=t?Object.keys(b).reduce(function(c,e){b[e].test(t)&&(c[e]=!0);return c},{}):Object.keys(b).reduce(function(c,
       e){e in k&&(c[e]=!0);return c},{});m=d.filter(function(c){return c.a in y}).map(function(c){return c.url});if(!m.length)return u();var v=document.createDocumentFragment();m.forEach(function(c,e){var g=document.createElement("link");g.href=c;g.rel="preload";g.as="font";var l=e+1;;g.onload=function(){return u(l)};g.setAttribute("crossorigin",!0);v.appendChild(g)});document.head.appendChild(v)}k=void 0===k?{}:k;var n=document.createElement("link");if(function(a,
@@ -94,7 +94,7 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 
                 
                 <a
-                  title="Static Web Site Compiler That Uses Closure Compiler For JS Bundling And Closure Stylesheets For CSS optimisations. Supports JSX Syntax To Write Static Elements And Dynamic Preact Components." class="NPMBadge" href="https://www.npmjs.com/package/splendid">
+                  title="Static Web Site Compiler That Uses Closure Compiler For JS Bundling And Closure Stylesheets For CSS optimisations. Supports JSX Syntax To Write Static Elements And Dynamic _Preact_ Components." class="NPMBadge" href="https://www.npmjs.com/package/splendid">
                   <span class="a"><em>Splendid</em></span><span class="b">1.18.1</span></a>
               </div>
               <h3 id="pages-2020">Pages 2020</h3>
@@ -103,7 +103,16 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                 <div class="a">
                   
                                   <h3 id="on-this-page">On This Page</h3>
-                                  <ul class="OnThisPage"><li data-heading="6-march-fri"><a href="#6-march-fri">6 March Fri</a></li><li data-heading="5-march-thu"><a href="#5-march-thu">5 March Thu</a></li><li data-heading="4-march-wed"><a href="#4-march-wed">4 March Wed</a></li><li data-heading="3-march-tue"><a href="#3-march-tue">3 March Tue</a></li><li data-heading="2-march-mon"><a href="#2-march-mon">2 March Mon</a></li><li data-heading="1-march-sun"><a href="#1-march-sun">1 March Sun</a></li></ul>
+                                  <ul class="OnThisPage">
+                                    <li data-heading="16-march-monday"><a href="#16-march-monday">16 March Monday</a></li>
+                                    <li data-heading="7-march-to-15-march"><a href="#7-march-to-15-march">7 March to 15 March</a></li>
+                                    <li data-heading="6-march-fri"><a href="#6-march-fri">6 March Fri</a></li>
+                                    <li data-heading="5-march-thu"><a href="#5-march-thu">5 March Thu</a></li>
+                                    <li data-heading="4-march-wed"><a href="#4-march-wed">4 March Wed</a></li>
+                                    <li data-heading="3-march-tue"><a href="#3-march-tue">3 March Tue</a></li>
+                                    <li data-heading="2-march-mon"><a href="#2-march-mon">2 March Mon</a></li>
+                                    <li data-heading="1-march-sun"><a href="#1-march-sun">1 March Sun</a></li>
+                                  </ul>
                                   <span class="b-xq b-Hk" id="c93ef"><span class="b-Hk" style="height:32px" data-loading>Loading sharing buttons...</span><noscript>Please enable JavaScript to Share</noscript></span>
                                 
                 </div>
@@ -131,6 +140,107 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='15'/%3E" data-io>
                 <noscript><img alt="section break" src="/blog/section-breaks/0.svg"></noscript></a>
             </p>
+            
+            <div data-section id="16-march-monday">
+            <h2>16 March Monday</h2>
+            
+            <p>Today I woke up standard time 9am, and was then working on finishing off introducing ÀLaMode JSX syntax shortcuts for <em>Bootstrap</em> and Bulma. I created a script to generate types definitions to extend JSX scope annotations for <span class="tm">HTMLAttributes</span> interface, as experimented yesterday.</p>
+            
+            <p>At some point I realised it worked for <em>React</em> but not <em>Preact</em> and it made me pretty anxious as I was really hoping to get it working with the latter, and invested a lot of time, effort and hope into it. If it couldn't work, I'd make me disappointed in Preact, but in the end I managed to get it done, as <em>Preact</em> declares JSX in the global namespace.</p>
+            
+            <p class="b-kC">
+              <img class="b-t" alt="bootstrap container jsx shortcut" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='397'/%3E" data-io>
+              <noscript>
+                <img class="b-t" alt="bootstrap container jsx shortcut" src="/blog/pages/index/img/container.gif">
+              </noscript>
+            </p>
+            
+            <p>There's a <a href="https://github.com/Microsoft/TypeScript/issues/28905">bug in VSCode</a> that prevents it from picking up property names with hyphens like <span class="tm">container-fluid</span> which is so annoying. If not for it, everything would be absolutely perfect.</p>
+            
+            
+            
+            
+            <p>For lunch, I went out to KFC and was doing some more thinking on the way back about work. It's pretty useful to think work-related stuff ;) as it distracts from problems and also enables to come up with solutions for the company. Instead of "why can't I", I'm practising to ask "how can I". It's not even that I might answer this question, but that my subconscious starts to actively direct me towards understanding.</p>
+            
+            <p>After lunch, I decided to start the website for depack, and did some designs on paper, which was then marked up. I found a video on pexels with an explosion and used it for the section that says that there's no more Babel :) By the end of the day, some initial work was done on the website. There was a problem with <span class="tm">@artdeco/snapsvganimator</span> package where a method wasn't compiled properly, as it used an eval</p>
+            
+            <pre id="ccdbf3"><code class="javascript hljs">class MovieClip {
+  executeFrameScript(s) {
+    eval(`(function(){${s}}).call(this)`)
+  }
+}</code></pre>
+            
+            <p>And because the compiler didn't see the reference to <span class="tm">this</span> (as it's inside the string), it took out the method out of the class scope and made it pure which means <span class="tm">this</span> wasn't accessible. This was fixed, and animation played fine.</p>
+            
+            <p>
+              <img class="ImageHolder b-t" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px" alt="compiler.page initial work" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='980' height='1010'/%3E">
+              <noscript>
+                <picture>
+                  <source
+                    srcset="pages/index/img/compiler.page-768.webp 768w,pages/index/img/compiler.page-576.webp 576w,pages/index/img/compiler.page-319.webp 319w,pages/index/img/compiler.page-980.webp 980w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px"
+                    type="image/webp">
+                  <img class="b-t" onLoad="webploaded(this)" alt="compiler.page initial work" src="/blog/pages/index/img/compiler.page-768.png" srcset="pages/index/img/compiler.page-768.png 768w,pages/index/img/compiler.page-576.png 576w,pages/index/img/compiler.page-319.png 319w,pages/index/img/compiler.page-980.png 980w" sizes="(max-width: 575.8px) 100vw,(max-width: 991.8px) 540px,(max-width: 1199.8px) 720px,855px">
+                </picture>
+              </noscript>
+            </p>
+            
+            <strong>TODO</strong>
+            
+            <ul>
+              <li>Move animation component into Splendid, or a separate <span class="tm">@artdeco/animation</span> component. It's a shame <span class="tm">splendid</span> namespace is taken on NPM and I don't know how to publish components that are not in the core of Splendid.</li>
+              <li>Add <span class="tm">[]</span> markdown tickbox.</li>
+            </ul>
+            
+            <p class="SectionBreak">
+              <a title="Back To Top" href="#top">
+                <img alt="section break"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+            </p>
+            </div>
+            
+            <div data-section id="7-march-to-15-march">
+            <h2>7 March to 15 March</h2>
+            
+            <p>7th was a Saturday and I went out in the evening. The 8th was a Sunday and I had a hangover for being rude to the cloakroom attendant who kept telling me off for taking a coat out to smoke and at the end of the night I lost my ticket, had to pay so I got agitated with him as he distracted me from thinking about where I'm putting it.</p>
+            
+            <p>On the 7th I found <a href="https://www.youtube.com/watch?v=u-bqiiRiDvk">this meditation</a> "I am Not the Body, I am Not even the Mind" which is quite good. It's supposed to be repeated 2ce a day for 30+ days :P But by the end of that week it was clear that listening to all that positive "vortexy" stuff really made me feel better than anything for the last year. It's actually the only thing that works.</p>
+            
+            <div class="b-B b-xq b-Mk b-gm">
+              <div class="b-jb b-wb">
+                <img class="ImageHolder b-t b-xq b-Uu" sizes="(max-width: 575.8px) 100vw,(max-width: 767.8px) 510px,(max-width: 991.8px) 197px,(max-width: 1199.8px) 208px,253px" alt="buddha" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='550' height='499'/%3E">
+                <noscript>
+                  <picture>
+                    <source
+                      srcset="pages/index/img/buddhabluepink550-319.webp 319w,pages/index/img/buddhabluepink550-550.webp 550w"
+                      sizes="(max-width: 575.8px) 100vw,(max-width: 767.8px) 510px,(max-width: 991.8px) 197px,(max-width: 1199.8px) 208px,253px" type="image/webp">
+                    <img class="b-t b-xq b-Uu" onLoad="webploaded(this)" alt="buddha" src="/blog/pages/index/img/buddhabluepink550-319.jpg" srcset="pages/index/img/buddhabluepink550-319.jpg 319w,pages/index/img/buddhabluepink550-550.jpg 550w" sizes="(max-width: 575.8px) 100vw,(max-width: 767.8px) 510px,(max-width: 991.8px) 197px,(max-width: 1199.8px) 208px,253px">
+                  </picture>
+                </noscript>
+              </div>
+              <div class="b-D">
+                <p>On the 8th, I was in the living room watching TV and fell asleep with Guardians of the Galaxy on the background. Through sleep I could hear some conversation but my brain was generating some other dreams. It was like somebody needed a sphere, and at some point the sphere turns into a galactic vortex which is like a dot on a forehead of a Buddha who's sitting there mediating and whatever pain there is he can feel it too because it's all part of him. So I got the meaning of "Buddha consciousness", i.e. how we're all contained within that consciousness :)</p>
+              </div>
+            </div>
+            
+            <p>Monday was spent recording a bit more videos to finish off the Youtube film. Tuesday editing, and so is Wednesday. Got really lazy with the blog and don't even know what's been happening whole week, but the main focus is that at first I wanted to fund raise for Irio as a product, but then I realised I needed to switch attention to Depack as a bundler, since it could reach more people and is just more logical. The hot reload that I was writing about thus isn't part of Idio, but of Depack, because front-end developers and designers wouldn't want to get into intricacies of setting up <em>Idio</em> server's middleware. Therefore it must be abstracted into a bundler, that is, <span class="tm">depack</span>.</p>
+            
+            <p>Sunday the 15th was the most intense day when I was adding planned JSX features into ÀLaMode, like class names into properties <em>etc</em>, and integrating Closure Stylesheets. A few bug fixes had to be done on the latter, like recursive <span class="tm">calc(calc())</span>, and <span class="tm">:not(.A.B)</span> syntax which for some reason was said to be outside of grammar.</p>
+            
+            <strong>TODO</strong>
+            
+            <ul>
+              <li>Simplify <span class="tm">calc</span> in calc in <em>Closure Stylesheets</em>.</li>
+              <li>Provide a development server for <em>Closure Stylesheets</em> so that Java doesn't have to be restarted again and again.</li>
+            </ul>
+            
+            <p class="SectionBreak">
+              <a title="Back To Top" href="#top">
+                <img alt="section break"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/2.svg"></noscript></a>
+            </p>
+            </div>
             
             <div data-section id="6-march-fri">
             <h2>6 March Fri</h2>
@@ -167,8 +277,8 @@ a.join("\n "),"but supports alternatives."):console.log("\ud83d\udcbd Browser su
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/1.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/3.svg"></noscript></a>
             </p>
             </div>
             
@@ -265,13 +375,13 @@ Are you sure you want to continue connecting (yes/no)?</code></pre>
             
             <p>Both of this things really relaxed me and made me feel less stressed. It's how I want to feel always but what can I do when a real criminal has ruined my life? There's this hypothetical "positive attraction" mode, and there's reality when psychopaths ruin you (am i complaining? yeah yeah). If I wasn't doing all the work that I'm doing, there would be nothing that could save me, so positive thinking is a good addition and mental gymnastics to achieving success, but there must be hard work behind it.</p>
             
-            <p>After that, worked on MNP to update the API with <span class="tm">removeBlocks</span> and <span class="tm">keepBlocks</span> functions. Also published types for the API so that they can be used in the configuration file and tested it against the package. Created a Preact UI for artdeco.tech to add new links with redirect.</p>
+            <p>After that, worked on MNP to update the API with <span class="tm">removeBlocks</span> and <span class="tm">keepBlocks</span> functions. Also published types for the API so that they can be used in the configuration file and tested it against the package. Created a <em>Preact</em> UI for artdeco.tech to add new links with redirect.</p>
             
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='13'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/2.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/4.svg"></noscript></a>
             </p>
             </div>
             
@@ -291,8 +401,8 @@ Are you sure you want to continue connecting (yes/no)?</code></pre>
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/3.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='10'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/5.svg"></noscript></a>
             </p>
             </div>
             
@@ -365,8 +475,8 @@ const example = (s) =&gt; {
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/4.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='10'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/6.svg"></noscript></a>
             </p>
             </div>
             
@@ -426,8 +536,8 @@ const example = (s) =&gt; {
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='10'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/5.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='12'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/7.svg"></noscript></a>
             </p>
             </div>
             
@@ -460,8 +570,8 @@ const regex = /\n\n[^\s&lt;][\s\S]+\n\n/</code></pre>
             <p class="SectionBreak">
               <a title="Back To Top" href="#top">
                 <img alt="section break"
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='10'/%3E" data-io>
-                <noscript><img alt="section break" src="/blog/section-breaks/6.svg"></noscript></a>
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='12'/%3E" data-io>
+                <noscript><img alt="section break" src="/blog/section-breaks/8.svg"></noscript></a>
             </p>
             </div>
           </div>

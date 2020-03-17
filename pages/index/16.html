@@ -1,0 +1,39 @@
+##! 16 March Monday
+
+Today I woke up standard time 9am, and was then working on finishing off introducing ÀLaMode JSX syntax shortcuts for Bootstrap and Bulma. I created a script to generate types definitions to extend JSX scope annotations for `HTMLAttributes` interface, as experimented yesterday.
+
+At some point I realised it worked for React but not Preact and it made me pretty anxious as I was really hoping to get it working with the latter, and invested a lot of time, effort and hope into it. If it couldn't work, I'd make me disappointed in Preact, but in the end I managed to get it done, as Preact declares JSX in the global namespace.
+
+<p text-center>
+  <img img-fluid src="./img/container.gif" alt="bootstrap container jsx shortcut" />
+</p>
+
+There's a [bug in VSCode](https://github.com/Microsoft/TypeScript/issues/28905) that prevents it from picking up property names with hyphens like `container-fluid` which is so annoying. If not for it, everything would be absolutely perfect.
+
+<!-- https://github.com/ionic-team/stencil/issues/121 -->
+<!-- https://github.com/microsoft/TypeScript/issues/32447 -->
+
+For lunch, I went out to KFC and was doing some more thinking on the way back about work. It's pretty useful to think work-related stuff ;) as it distracts from problems and also enables to come up with solutions for the company. Instead of "why can't I", I'm practising to ask "how can I". It's not even that I might answer this question, but that my subconscious starts to actively direct me towards understanding.
+
+After lunch, I decided to start the website for depack, and did some designs on paper, which was then marked up. I found a video on pexels with an explosion and used it for the section that says that there's no more Babel :) By the end of the day, some initial work was done on the website. There was a problem with `@artdeco/snapsvganimator` package where a method wasn't compiled properly, as it used an eval
+
+```js
+class MovieClip {
+  executeFrameScript(s) {
+    eval(`(function(){${s}}).call(this)`)
+  }
+}
+```
+
+And because the compiler didn't see the reference to `this` (as it's inside the string), it took out the method out of the class scope and made it pure which means `this` wasn't accessible. This was fixed, and animation played fine.
+
+<p>
+  <img webp="picture" img-fluid src="./img/compiler.page.png" alt="compiler.page initial work" />
+</p>
+
+*TODO*
+
+- Move animation component into Splendid, or a separate `@artdeco/animation` component. It's a shame `splendid` namespace is taken on NPM and I don't know how to publish components that are not in the core of Splendid.
+- Add `[]` markdown tickbox.
+
+<section-break />

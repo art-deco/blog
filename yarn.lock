@@ -139,10 +139,10 @@ splendid-web-components@^1.0.0:
   resolved "https://registry.yarnpkg.com/splendid-web-components/-/splendid-web-components-1.0.0.tgz#6bc9cbef8254f96c2102a00e979e4dc3537c9cbb"
   integrity sha512-oZOB2VaEoLEA/WS+SX5KybIjsm1ua3dzkqWaE1C1CAaI/hhCohA//u0WyF7YGOyph164++Wdb8dpoA0lqK5N1g==
 
-splendid@^1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/splendid/-/splendid-1.18.0.tgz#4c5ac4de3f81927c2f6a5bfb530cb66f738ccf04"
-  integrity sha512-kXNf2rSrMOvYFDO+XmyB33eXwnzMmPd5T4Xo/zpEp1nEK3KZ+MR0byKk0s3TVE4FqScQu3vJitBdAIbxOQ9wCg==
+splendid@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/splendid/-/splendid-1.18.1.tgz#d7e54a175abf1968d7964abb9c412e1a2634f92c"
+  integrity sha512-Mq9sXD+hVJ8tYrKhld6ioSylomLkH85Klok88mY7F4XqNzjIgK/i0Chkd9mr3gN7qgo63rd0BlrEPV7jwcAuYg==
   dependencies:
     "@externs/preact" "^1.3.1"
     "@idio/idio" "^1.5.1"

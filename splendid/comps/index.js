@@ -52,7 +52,7 @@ const meta = [{
 },
 {
   key: 'highlightjs',
-  id: 'ccdbf,ccdbf1,ccdbf2',
+  id: 'ccdbf,ccdbf1,ccdbf2,ccdbf3',
   props: {
     lang: 'javascript',
   },

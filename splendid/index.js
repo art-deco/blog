@@ -7,11 +7,11 @@ const config = {
       replacement: '[Art Deco™](https://www.artd.eco)',
     },
     {
-      re: / (GitHub( Actions)|Idio|Splendid|StackOverflow) /g,
+      re: / (GitHub( Actions)|Idio|Splendid|StackOverflow|Preact|React|Bulma|Bootstrap) /g,
       replacement: ' _$1_ ',
     },
     {
-      re: /^(GitHub( Actions)|Idio|Splendid|StackOverflow) /gm,
+      re: /^(GitHub( Actions)|Idio|Splendid|StackOverflow|Preact|React|Bulma|Bootstrap) /gm,
       replacement: '_$1_ ',
     },
   ],
